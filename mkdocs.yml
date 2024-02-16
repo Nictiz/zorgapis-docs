@@ -1,0 +1,131 @@
+﻿# Project information
+site_name: ZorgAPIs Developer Portal
+site_description: API Library for Dutch Healthcare Developer Portal.
+site_author: Nictiz
+site_url: https://nictiz.github.io/zorgapis-docs/
+
+# Repository
+repo_url: https://github.com/nictiz/zorgapis-docs
+edit_uri: blob/main/docs/
+
+# Copyright
+copyright: >-
+  Copyright &copy; 2024 Nictiz | <a href="#__consent">Change cookie settings</a> |
+  <a href="https://nictiz.nl/privacy-statement" target="_blank" rel="noopener">Privacy statement</a>
+
+# Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: deep orange
+      accent: deep orange
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: deep orange
+      accent: deep orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Roboto
+    code: JetBrains Mono
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: nictiz/zorgapis-docs
+      branch: main
+
+# Additional configuration
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our
+      documentation and whether users find what they're searching for. With your consent, you're helping us to make our
+      documentation better.
+  analytics:
+    provider: google
+    property: G-VXC1C6H3RT
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOc9XGTqkKKysztJPx5R7lh0TAskQHV_NW-PtaZ-6G6gXiWQ/viewform?entry.816166561={url}" target="_blank" rel="noopener">telling us what you're missing</a>.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Nictiz
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/nictiz/
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+# Page tree
+nav:
+  - Home:
+    - index.md
+    - Nictiz: nictiz.md
+  - Learn:
+      - learn/index.md
+      - Adding an organization: learn/adding-an-organization.md
+      - Adding an API specification: learn/adding-an-api-specification.md
+  - Play:
+    - play/index.md
+  - Code: code/index.md
