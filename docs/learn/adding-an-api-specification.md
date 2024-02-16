@@ -47,9 +47,9 @@
         first made available by the [organization](./adding-an-organization.md#add-organization) that maintains the API
         specification.
 
-        **Note**: `publishTime` is **not** to be used for the the date and time at which this version is published in
-        the API Library for Dutch Healthcare. This value is set automatically by the API server upon creation of the
-        item and can be accessed via read-only property `createTime`.
+        **Note**: `publishTime` is **not** to be used for the date and time at which this version is published in the
+        API Library for Dutch Healthcare. This value is set automatically by the API server upon creation of the item
+        and can be accessed via read-only property `createTime`.
     3.  The [SemVer](https://semver.org/){: target="_blank" } version information. Additional properties for pre-release
         (`#!js "preRelease"`) and build metadata (`#!js "build"`) are available.
     4.  The URL type, for example, `#!js "OPENAPI_SPECIFICATION"`.
@@ -62,6 +62,13 @@
 
     --8<-- "learn/snippets/add-api-specification-version_response.json"
     ```
+
+    1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
+        https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the API specification version
+        by the API server.
+    2.  The Universally Unique Identifier, or UUID (see [RFC 4122](
+        https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the API specification version
+        URL by the API server.
 
 ## Add declaration of conformity
 
