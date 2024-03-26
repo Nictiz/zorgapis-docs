@@ -1,0 +1,1588 @@
+{
+	"info": {
+		"_postman_id": "c22bf5f5-a2ec-40df-86a2-7817de5c7203",
+		"name": "ZorgAPIs API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32862681",
+		"_collection_link": "https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203?action=share&source=collection_link&creator=32862681"
+	},
+	"item": [
+		{
+			"name": "Getting started",
+			"item": [
+				{
+					"name": "Add your organization",
+					"item": [
+						{
+							"name": "1. Add organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"organizationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Stichting MedMij\",\r\n  \"description\": \"MedMij is the standard in the Netherlands for the secure exchange of health data between care users and care providers.\",\r\n  \"website\": \"https://medmij.nl/\",\r\n  \"emailAddress\": \"info@medmij.nl\",\r\n  \"phoneNumber\": \"+31 (0)85 303 4959\",\r\n  \"address\": {\r\n    \"street\": \"Maanweg\",\r\n    \"houseNumber\": 174,\r\n    \"addressLine2\": \"Building C/3rd floor\",\r\n    \"postalCode\": \"2516 AB\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/organizations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"organizations"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add your API specification",
+					"item": [
+						{
+							"name": "1. Add API specification",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"apiSpecificationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. Add API specification version",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"apiSpecificationVersionId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    },\r\n    {\r\n      \"type\": \"TECHNICAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications",
+										":apiSpecificationId",
+										"versions"
+									],
+									"variable": [
+										{
+											"key": "apiSpecificationId",
+											"value": "{{apiSpecificationId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3. Add declaration of conformity",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"apiSpecificationVersionDeclarationOfConformityId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"requirementsVersion\": \"1.2.0\",\r\n  \"requirements\": {\r\n    \"SD001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\",\r\n      \"remarks\": \"This is an example text.\"\r\n    },\r\n    \"SD001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.005\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.006\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.007\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.010\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.011\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.013\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.014\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.015\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.016\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.017\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD010\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD011\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD013\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD014\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR-R001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR-R002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC006\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC007\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications",
+										":apiSpecificationId",
+										"versions",
+										":versionId",
+										"declarations-of-conformity"
+									],
+									"variable": [
+										{
+											"key": "apiSpecificationId",
+											"value": "{{apiSpecificationId}}"
+										},
+										{
+											"key": "versionId",
+											"value": "{{apiSpecificationVersionId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4. Set API specification mainVersionId",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"mainVersionId\": \"{{apiSpecificationVersionId}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications",
+										":apiSpecificationId"
+									],
+									"variable": [
+										{
+											"key": "apiSpecificationId",
+											"value": "{{apiSpecificationId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v1alpha1",
+			"item": [
+				{
+					"name": "organizations",
+					"item": [
+						{
+							"name": "{organizationId}",
+							"item": [
+								{
+									"name": "Get an organization by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/organizations/:organizationId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"organizations",
+												":organizationId"
+											],
+											"variable": [
+												{
+													"key": "organizationId",
+													"value": "{{organizationId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update an organization",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/organizations/:organizationId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"organizations",
+												":organizationId"
+											],
+											"variable": [
+												{
+													"key": "organizationId",
+													"value": "{{organizationId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all organizations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/organizations?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"organizationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/organizations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"organizations"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "api-requirements-versions",
+					"item": [
+						{
+							"name": "{versionName}",
+							"item": [
+								{
+									"name": "api-requirements",
+									"item": [
+										{
+											"name": "List all API requirements version API requirements",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1alpha1",
+														"api-requirements-versions",
+														":versionName",
+														"api-requirements"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													],
+													"variable": [
+														{
+															"key": "versionName",
+															"value": "{{apiRequirementsVersionName}}"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "All API_SPECIFICATION REST requirements",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/{{apiRequirementsVersionName}}/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))&count=",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1alpha1",
+																"api-requirements-versions",
+																"{{apiRequirementsVersionName}}",
+																"api-requirements"
+															],
+															"query": [
+																{
+																	"key": "limit",
+																	"value": ""
+																},
+																{
+																	"key": "skip",
+																	"value": ""
+																},
+																{
+																	"key": "sort",
+																	"value": ""
+																},
+																{
+																	"key": "filter",
+																	"value": "and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))"
+																},
+																{
+																	"key": "count",
+																	"value": ""
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": "Text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "All API_SPECIFICATION SOAP requirements",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/{{apiRequirementsVersionName}}/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))&count=",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1alpha1",
+																"api-requirements-versions",
+																"{{apiRequirementsVersionName}}",
+																"api-requirements"
+															],
+															"query": [
+																{
+																	"key": "limit",
+																	"value": ""
+																},
+																{
+																	"key": "skip",
+																	"value": ""
+																},
+																{
+																	"key": "sort",
+																	"value": ""
+																},
+																{
+																	"key": "filter",
+																	"value": "and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))"
+																},
+																{
+																	"key": "count",
+																	"value": ""
+																}
+															]
+														}
+													},
+													"_postman_previewlanguage": "Text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Get an API requirements version by name",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"api-requirements-versions",
+												":versionName"
+											],
+											"variable": [
+												{
+													"key": "versionName",
+													"value": "{{apiRequirementsVersionName}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update an API requirements version",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"1.2.0\",\r\n  \"description\": \"This specification sets out requirements for Application Programming Interfaces (APIs) in Dutch Healthcare. It has been developed as part of the Nictiz API strategy.\",\r\n  \"url\": \"https://nictiz.github.io/api-requirements-docs/v1.2.0/\",\r\n  \"publishTime\": \"2023-07-12T10:45:30.500Z\",\r\n  \"semVer\": {\r\n    \"major\": 1,\r\n    \"minor\": 2,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"api-requirements-versions",
+												":versionName"
+											],
+											"variable": [
+												{
+													"key": "versionName",
+													"value": "{{apiRequirementsVersionName}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all API requirements versions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-requirements-versions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an API requirements version",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"name\";\r",
+											"const VARIABLE_NAME = \"apiRequirementsVersionName\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"1.2.0\",\r\n  \"description\": \"This specification sets out requirements for Application Programming Interfaces (APIs) in Dutch Healthcare. It has been developed as part of the Nictiz API strategy.\",\r\n  \"url\": \"https://nictiz.github.io/api-requirements-docs/v1.2.0/\",\r\n  \"publishTime\": \"2023-07-12T10:45:30.500Z\",\r\n  \"semVer\": {\r\n    \"major\": 1,\r\n    \"minor\": 2,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"apiRequirements\": [\r\n    {\r\n      \"code\": \"SD001\",\r\n      \"description\": \"API documentation MUST be publicly and freely available\",\r\n      \"explanation\": \"This is an example text.\",\r\n      \"url\": \"https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd001-api-documentation-must-be-publicly-and-freely-available\",\r\n      \"requirementLevel\": \"MUST\",\r\n      \"score\": 1,\r\n      \"category\": \"API_SPECIFICATION_AND_DOCUMENTATION\",\r\n      \"roles\": [\r\n        \"API_SPECIFIER\"\r\n      ],\r\n      \"perspectiveTypes\": [\r\n        \"API_SPECIFICATION\"\r\n      ],\r\n      \"architecturalStyles\": [\r\n        \"REST\",\r\n        \"SOAP\",\r\n        \"GRAPHQL\",\r\n        \"ODATA\",\r\n        \"GRPC\",\r\n        \"OTHER\"\r\n      ],\r\n      \"standardizationLevels\": [\r\n        \"OPEN_API\",\r\n        \"TECHNICALLY_STANDARDIZED_API\",\r\n        \"FULLY_STANDARDIZED_API\"\r\n      ]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-requirements-versions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "api-specifications",
+					"item": [
+						{
+							"name": "{apiSpecificationId}",
+							"item": [
+								{
+									"name": "versions",
+									"item": [
+										{
+											"name": "{versionId}",
+											"item": [
+												{
+													"name": "urls",
+													"item": [
+														{
+															"name": "{urlId}",
+															"item": [
+																{
+																	"name": "Get an API specification version URL by ID",
+																	"request": {
+																		"method": "GET",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"v1alpha1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"urls",
+																				":urlId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "urlId",
+																					"value": "{{apiSpecificationVersionUrlId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																},
+																{
+																	"name": "Update an API specification version URL",
+																	"request": {
+																		"method": "PATCH",
+																		"header": [],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\r\n  \"type\": \"FUNCTIONAL_DESIGN\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n}",
+																			"options": {
+																				"raw": {
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"v1alpha1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"urls",
+																				":urlId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "urlId",
+																					"value": "{{apiSpecificationVersionUrlId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																},
+																{
+																	"name": "Delete an API specification version URL",
+																	"request": {
+																		"method": "DELETE",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"v1alpha1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"urls",
+																				":urlId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "urlId",
+																					"value": "{{apiSpecificationVersionUrlId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																}
+															]
+														},
+														{
+															"name": "List all API specification version URLs",
+															"request": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls?limit=&skip=&sort=&filter=&count=",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1alpha1",
+																		"api-specifications",
+																		":apiSpecificationId",
+																		"versions",
+																		":versionId",
+																		"urls"
+																	],
+																	"query": [
+																		{
+																			"key": "limit",
+																			"value": ""
+																		},
+																		{
+																			"key": "skip",
+																			"value": ""
+																		},
+																		{
+																			"key": "sort",
+																			"value": ""
+																		},
+																		{
+																			"key": "filter",
+																			"value": ""
+																		},
+																		{
+																			"key": "count",
+																			"value": ""
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "apiSpecificationId",
+																			"value": "{{apiSpecificationId}}"
+																		},
+																		{
+																			"key": "versionId",
+																			"value": "{{apiSpecificationVersionId}}"
+																		}
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Add an API specification version URL",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"exec": [
+																			"const PROPERTY_NAME = \"id\";\r",
+																			"const VARIABLE_NAME = \"apiSpecificationVersionUrlId\";\r",
+																			"\r",
+																			"pm.test(\"Extract variable\", () => {\r",
+																			"    pm.response.to.have.status(201);\r",
+																			"    let jsonData = pm.response.json();\r",
+																			"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+																			"\r",
+																			"    let property = jsonData[PROPERTY_NAME];\r",
+																			"    // Set variable on environment if found, otherwise set on collection\r",
+																			"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+																			"        pm.environment.set(VARIABLE_NAME, property);\r",
+																			"    } else {\r",
+																			"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+																			"    }\r",
+																			"});"
+																		],
+																		"type": "text/javascript"
+																	}
+																}
+															],
+															"request": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\r\n  \"type\": \"FUNCTIONAL_DESIGN\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1alpha1",
+																		"api-specifications",
+																		":apiSpecificationId",
+																		"versions",
+																		":versionId",
+																		"urls"
+																	],
+																	"variable": [
+																		{
+																			"key": "apiSpecificationId",
+																			"value": "{{apiSpecificationId}}"
+																		},
+																		{
+																			"key": "versionId",
+																			"value": "{{apiSpecificationVersionId}}"
+																		}
+																	]
+																}
+															},
+															"response": []
+														}
+													]
+												},
+												{
+													"name": "declarations-of-conformity",
+													"item": [
+														{
+															"name": "{declarationOfConformityId}",
+															"item": [
+																{
+																	"name": "Get an API specification version declaration of conformity by ID",
+																	"request": {
+																		"method": "GET",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity/:declarationOfConformityId",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"v1alpha1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"declarations-of-conformity",
+																				":declarationOfConformityId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "declarationOfConformityId",
+																					"value": "{{apiSpecificationVersionDeclarationOfConformityId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																}
+															]
+														},
+														{
+															"name": "List all API specification version declarations of conformity",
+															"request": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity?limit=&skip=&sort=&filter=&count=",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1alpha1",
+																		"api-specifications",
+																		":apiSpecificationId",
+																		"versions",
+																		":versionId",
+																		"declarations-of-conformity"
+																	],
+																	"query": [
+																		{
+																			"key": "limit",
+																			"value": ""
+																		},
+																		{
+																			"key": "skip",
+																			"value": ""
+																		},
+																		{
+																			"key": "sort",
+																			"value": ""
+																		},
+																		{
+																			"key": "filter",
+																			"value": ""
+																		},
+																		{
+																			"key": "count",
+																			"value": ""
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "apiSpecificationId",
+																			"value": "{{apiSpecificationId}}"
+																		},
+																		{
+																			"key": "versionId",
+																			"value": "{{apiSpecificationVersionId}}"
+																		}
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Add an API specification version declaration of conformity",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"exec": [
+																			"const PROPERTY_NAME = \"id\";\r",
+																			"const VARIABLE_NAME = \"apiSpecificationVersionDeclarationOfConformityId\";\r",
+																			"\r",
+																			"pm.test(\"Extract variable\", () => {\r",
+																			"    pm.response.to.have.status(201);\r",
+																			"    let jsonData = pm.response.json();\r",
+																			"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+																			"\r",
+																			"    let property = jsonData[PROPERTY_NAME];\r",
+																			"    // Set variable on environment if found, otherwise set on collection\r",
+																			"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+																			"        pm.environment.set(VARIABLE_NAME, property);\r",
+																			"    } else {\r",
+																			"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+																			"    }\r",
+																			"});"
+																		],
+																		"type": "text/javascript"
+																	}
+																}
+															],
+															"request": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\r\n  \"requirementsVersion\": \"1.2.0\",\r\n  \"requirements\": {\r\n    \"SD001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\",\r\n      \"remarks\": \"This is an example text.\"\r\n    },\r\n    \"SD001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.005\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.006\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.007\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.010\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.011\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.013\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.014\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.015\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.016\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD001.017\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD002.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD003.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD004.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD005.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD009.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD010\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD011\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD013\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SD014\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DI001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM001.004\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM002.003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"LM008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR012\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR-R001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"DR-R002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC006\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC007\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC008\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC009\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"SC-R003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003.001\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003.002\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    },\r\n    \"IS003\": {\r\n      \"conformityType\": \"NOT_EVALUATED\"\r\n    }\r\n  }\r\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1alpha1",
+																		"api-specifications",
+																		":apiSpecificationId",
+																		"versions",
+																		":versionId",
+																		"declarations-of-conformity"
+																	],
+																	"variable": [
+																		{
+																			"key": "apiSpecificationId",
+																			"value": "{{apiSpecificationId}}"
+																		},
+																		{
+																			"key": "versionId",
+																			"value": "{{apiSpecificationVersionId}}"
+																		}
+																	]
+																}
+															},
+															"response": []
+														}
+													]
+												},
+												{
+													"name": "Get an API specification version by ID",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1alpha1",
+																"api-specifications",
+																":apiSpecificationId",
+																"versions",
+																":versionId"
+															],
+															"variable": [
+																{
+																	"key": "apiSpecificationId",
+																	"value": "{{apiSpecificationId}}"
+																},
+																{
+																	"key": "versionId",
+																	"value": "{{apiSpecificationVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Update an API specification version",
+													"request": {
+														"method": "PATCH",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1alpha1",
+																"api-specifications",
+																":apiSpecificationId",
+																"versions",
+																":versionId"
+															],
+															"variable": [
+																{
+																	"key": "apiSpecificationId",
+																	"value": "{{apiSpecificationId}}"
+																},
+																{
+																	"key": "versionId",
+																	"value": "{{apiSpecificationVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "List all API specification versions",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1alpha1",
+														"api-specifications",
+														":apiSpecificationId",
+														"versions"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													],
+													"variable": [
+														{
+															"key": "apiSpecificationId",
+															"value": "{{apiSpecificationId}}"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Add an API specification version",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"const PROPERTY_NAME = \"id\";\r",
+															"const VARIABLE_NAME = \"apiSpecificationVersionId\";\r",
+															"\r",
+															"pm.test(\"Extract variable\", () => {\r",
+															"    pm.response.to.have.status(201);\r",
+															"    let jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+															"\r",
+															"    let property = jsonData[PROPERTY_NAME];\r",
+															"    // Set variable on environment if found, otherwise set on collection\r",
+															"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+															"        pm.environment.set(VARIABLE_NAME, property);\r",
+															"    } else {\r",
+															"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+															"    }\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    }\r\n  ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1alpha1",
+														"api-specifications",
+														":apiSpecificationId",
+														"versions"
+													],
+													"variable": [
+														{
+															"key": "apiSpecificationId",
+															"value": "{{apiSpecificationId}}"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Get an API specification by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"api-specifications",
+												":apiSpecificationId"
+											],
+											"variable": [
+												{
+													"key": "apiSpecificationId",
+													"value": "{{apiSpecificationId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update an API specification",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"mainVersionId\": \"{{apiSpecificationVersionId}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1alpha1",
+												"api-specifications",
+												":apiSpecificationId"
+											],
+											"variable": [
+												{
+													"key": "apiSpecificationId",
+													"value": "{{apiSpecificationId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all API specifications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an API specification",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"apiSpecificationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1alpha1/api-specifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1alpha1",
+										"api-specifications"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.sandbox.zorgapis.nl"
+		},
+		{
+			"key": "organizationId",
+			"value": ""
+		},
+		{
+			"key": "apiRequirementsVersionName",
+			"value": "1.2.0"
+		},
+		{
+			"key": "apiSpecificationId",
+			"value": ""
+		},
+		{
+			"key": "apiSpecificationVersionId",
+			"value": ""
+		},
+		{
+			"key": "apiSpecificationVersionUrlId",
+			"value": ""
+		},
+		{
+			"key": "apiSpecificationVersionDeclarationOfConformityId",
+			"value": ""
+		}
+	]
+}
