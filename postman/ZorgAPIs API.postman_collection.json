@@ -54,12 +54,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/organizations",
+									"raw": "{{baseApiUrl}}/v1alpha2/organizations",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"organizations"
 									]
 								}
@@ -112,12 +112,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications"
 									]
 								}
@@ -165,12 +165,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications",
 										":apiSpecificationId",
 										"versions"
@@ -226,12 +226,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications",
 										":apiSpecificationId",
 										"versions",
@@ -267,12 +267,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications",
 										":apiSpecificationId"
 									],
@@ -287,12 +287,451 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Invite user to your organization",
+					"item": [
+						{
+							"name": "1. Add invitation",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"invitationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"emailAddress\": \"john.doe@nictiz.nl\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1alpha2",
+										"organizations",
+										":organizationId",
+										"invitations"
+									],
+									"variable": [
+										{
+											"key": "organizationId",
+											"value": "{{organizationId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Accept invitation to join an organization",
+					"item": [
+						{
+							"name": "1. Get pending invitations",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"invitationId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.be.an(\"array\");\r",
+											"    pm.expect(jsonData, \"No pending invitations found.\").not.be.empty;\r",
+											"    let firstItem = jsonData[0];\r",
+											"    pm.expect(firstItem).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = firstItem[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations?limit=&skip=&sort=&filter=eq(status,\"PENDING\")&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1alpha2",
+										"users",
+										"me",
+										"invitations"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": "eq(status,\"PENDING\")"
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. Accept pending invitation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1alpha2",
+										"users",
+										"me",
+										"invitations",
+										":invitationIdAction"
+									],
+									"variable": [
+										{
+											"key": "invitationIdAction",
+											"value": "{{invitationId}}:accept"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "v1alpha1",
+			"name": "v1alpha2",
 			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "me",
+							"item": [
+								{
+									"name": "invitations",
+									"item": [
+										{
+											"name": "{invitationId}",
+											"item": [
+												{
+													"name": "Get a user invitation by ID",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"users",
+																"me",
+																"invitations",
+																":invitationId"
+															],
+															"variable": [
+																{
+																	"key": "invitationId",
+																	"value": "{{invitationId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Accept a pending user invitation",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"users",
+																"me",
+																"invitations",
+																":invitationIdAction"
+															],
+															"variable": [
+																{
+																	"key": "invitationIdAction",
+																	"value": "{{invitationId}}:accept"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Decline a pending user invitation",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"users",
+																"me",
+																"invitations",
+																":invitationIdAction"
+															],
+															"variable": [
+																{
+																	"key": "invitationIdAction",
+																	"value": "{{invitationId}}:decline"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "List all user invitations",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseApiUrl}}"
+													],
+													"path": [
+														"v1alpha2",
+														"users",
+														"me",
+														"invitations"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "memberships",
+									"item": [
+										{
+											"name": "{membershipId}",
+											"item": [
+												{
+													"name": "Get a user membership by ID",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships/:membershipId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"users",
+																"me",
+																"memberships",
+																":membershipId"
+															],
+															"variable": [
+																{
+																	"key": "membershipId",
+																	"value": "{{membershipId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Delete a user membership",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships/:membershipId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"users",
+																"me",
+																"memberships",
+																":membershipId"
+															],
+															"variable": [
+																{
+																	"key": "membershipId",
+																	"value": "{{membershipId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "List all user memberships",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseApiUrl}}"
+													],
+													"path": [
+														"v1alpha2",
+														"users",
+														"me",
+														"memberships"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Get user information for authenticated user",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1alpha2/users/me",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1alpha2",
+												"users",
+												"me"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
 				{
 					"name": "organizations",
 					"item": [
@@ -300,17 +739,319 @@
 							"name": "{organizationId}",
 							"item": [
 								{
+									"name": "invitations",
+									"item": [
+										{
+											"name": "{invitationId}",
+											"item": [
+												{
+													"name": "Get an organization invitation by ID",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations/:invitationId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"organizations",
+																":organizationId",
+																"invitations",
+																":invitationId"
+															],
+															"variable": [
+																{
+																	"key": "organizationId",
+																	"value": "{{organizationId}}"
+																},
+																{
+																	"key": "invitationId",
+																	"value": "{{invitationId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Cancel a pending organization invitation",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations/:invitationIdAction",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"organizations",
+																":organizationId",
+																"invitations",
+																":invitationIdAction"
+															],
+															"variable": [
+																{
+																	"key": "organizationId",
+																	"value": "{{organizationId}}"
+																},
+																{
+																	"key": "invitationIdAction",
+																	"value": "{{invitationId}}:cancel"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "List all organization invitations",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseApiUrl}}"
+													],
+													"path": [
+														"v1alpha2",
+														"organizations",
+														":organizationId",
+														"invitations"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													],
+													"variable": [
+														{
+															"key": "organizationId",
+															"value": "{{organizationId}}"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Add an organization invitation",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"const PROPERTY_NAME = \"id\";\r",
+															"const VARIABLE_NAME = \"invitationId\";\r",
+															"\r",
+															"pm.test(\"Extract variable\", () => {\r",
+															"    pm.response.to.have.status(201);\r",
+															"    let jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+															"\r",
+															"    let property = jsonData[PROPERTY_NAME];\r",
+															"    // Set variable on environment if found, otherwise set on collection\r",
+															"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+															"        pm.environment.set(VARIABLE_NAME, property);\r",
+															"    } else {\r",
+															"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+															"    }\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"emailAddress\": \"john.doe@nictiz.nl\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations",
+													"host": [
+														"{{baseApiUrl}}"
+													],
+													"path": [
+														"v1alpha2",
+														"organizations",
+														":organizationId",
+														"invitations"
+													],
+													"variable": [
+														{
+															"key": "organizationId",
+															"value": "{{organizationId}}"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "memberships",
+									"item": [
+										{
+											"name": "{membershipId}",
+											"item": [
+												{
+													"name": "Get an organization membership by ID",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships/:membershipId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"organizations",
+																":organizationId",
+																"memberships",
+																":membershipId"
+															],
+															"variable": [
+																{
+																	"key": "organizationId",
+																	"value": "{{organizationId}}"
+																},
+																{
+																	"key": "membershipId",
+																	"value": "{{membershipId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Delete an organization membership",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships/:membershipId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1alpha2",
+																"organizations",
+																":organizationId",
+																"memberships",
+																":membershipId"
+															],
+															"variable": [
+																{
+																	"key": "organizationId",
+																	"value": "{{organizationId}}"
+																},
+																{
+																	"key": "membershipId",
+																	"value": "{{membershipId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "List all organization memberships",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships?limit=&skip=&sort=&filter=&count=",
+													"host": [
+														"{{baseApiUrl}}"
+													],
+													"path": [
+														"v1alpha2",
+														"organizations",
+														":organizationId",
+														"memberships"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": ""
+														},
+														{
+															"key": "skip",
+															"value": ""
+														},
+														{
+															"key": "sort",
+															"value": ""
+														},
+														{
+															"key": "filter",
+															"value": ""
+														},
+														{
+															"key": "count",
+															"value": ""
+														}
+													],
+													"variable": [
+														{
+															"key": "organizationId",
+															"value": "{{organizationId}}"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
 									"name": "Get an organization by ID",
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/organizations/:organizationId",
+											"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"organizations",
 												":organizationId"
 											],
@@ -339,12 +1080,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/organizations/:organizationId",
+											"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"organizations",
 												":organizationId"
 											],
@@ -366,12 +1107,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/organizations?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1alpha2/organizations?limit=&skip=&sort=&filter=&count=",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"organizations"
 									],
 									"query": [
@@ -441,12 +1182,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/organizations",
+									"raw": "{{baseApiUrl}}/v1alpha2/organizations",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"organizations"
 									]
 								}
@@ -470,12 +1211,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=&count=",
 													"host": [
-														"{{baseUrl}}"
+														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha1",
+														"v1alpha2",
 														"api-requirements-versions",
 														":versionName",
 														"api-requirements"
@@ -517,14 +1258,14 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/{{apiRequirementsVersionName}}/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))&count=",
+															"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))&count=",
 															"host": [
-																"{{baseUrl}}"
+																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha1",
+																"v1alpha2",
 																"api-requirements-versions",
-																"{{apiRequirementsVersionName}}",
+																":versionName",
 																"api-requirements"
 															],
 															"query": [
@@ -548,6 +1289,12 @@
 																	"key": "count",
 																	"value": ""
 																}
+															],
+															"variable": [
+																{
+																	"key": "versionName",
+																	"value": "{{apiRequirementsVersionName}}"
+																}
 															]
 														}
 													},
@@ -562,14 +1309,14 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/{{apiRequirementsVersionName}}/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))&count=",
+															"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))&count=",
 															"host": [
-																"{{baseUrl}}"
+																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha1",
+																"v1alpha2",
 																"api-requirements-versions",
-																"{{apiRequirementsVersionName}}",
+																":versionName",
 																"api-requirements"
 															],
 															"query": [
@@ -593,6 +1340,12 @@
 																	"key": "count",
 																	"value": ""
 																}
+															],
+															"variable": [
+																{
+																	"key": "versionName",
+																	"value": "{{apiRequirementsVersionName}}"
+																}
 															]
 														}
 													},
@@ -611,12 +1364,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName",
+											"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"api-requirements-versions",
 												":versionName"
 											],
@@ -645,12 +1398,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions/:versionName",
+											"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"api-requirements-versions",
 												":versionName"
 											],
@@ -672,12 +1425,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions?limit=&skip=&sort=&filter=&count=",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-requirements-versions"
 									],
 									"query": [
@@ -747,12 +1500,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-requirements-versions",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-requirements-versions"
 									]
 								}
@@ -785,12 +1538,12 @@
 																		"method": "GET",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
-																				"{{baseUrl}}"
+																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha1",
+																				"v1alpha2",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -831,12 +1584,12 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
-																				"{{baseUrl}}"
+																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha1",
+																				"v1alpha2",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -868,12 +1621,12 @@
 																		"method": "DELETE",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
-																				"{{baseUrl}}"
+																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha1",
+																				"v1alpha2",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -907,12 +1660,12 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls?limit=&skip=&sort=&filter=&count=",
+																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls?limit=&skip=&sort=&filter=&count=",
 																	"host": [
-																		"{{baseUrl}}"
+																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha1",
+																		"v1alpha2",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -996,12 +1749,12 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/urls",
+																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls",
 																	"host": [
-																		"{{baseUrl}}"
+																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha1",
+																		"v1alpha2",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1036,12 +1789,12 @@
 																		"method": "GET",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity/:declarationOfConformityId",
+																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity/:declarationOfConformityId",
 																			"host": [
-																				"{{baseUrl}}"
+																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha1",
+																				"v1alpha2",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -1075,12 +1828,12 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity?limit=&skip=&sort=&filter=&count=",
+																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity?limit=&skip=&sort=&filter=&count=",
 																	"host": [
-																		"{{baseUrl}}"
+																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha1",
+																		"v1alpha2",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1164,12 +1917,12 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
 																	"host": [
-																		"{{baseUrl}}"
+																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha1",
+																		"v1alpha2",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1198,12 +1951,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId",
+															"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId",
 															"host": [
-																"{{baseUrl}}"
+																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha1",
+																"v1alpha2",
 																"api-specifications",
 																":apiSpecificationId",
 																"versions",
@@ -1238,12 +1991,12 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions/:versionId",
+															"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId",
 															"host": [
-																"{{baseUrl}}"
+																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha1",
+																"v1alpha2",
 																"api-specifications",
 																":apiSpecificationId",
 																"versions",
@@ -1271,12 +2024,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions?limit=&skip=&sort=&filter=&count=",
 													"host": [
-														"{{baseUrl}}"
+														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha1",
+														"v1alpha2",
 														"api-specifications",
 														":apiSpecificationId",
 														"versions"
@@ -1354,12 +2107,12 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId/versions",
+													"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions",
 													"host": [
-														"{{baseUrl}}"
+														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha1",
+														"v1alpha2",
 														"api-specifications",
 														":apiSpecificationId",
 														"versions"
@@ -1382,12 +2135,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+											"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"api-specifications",
 												":apiSpecificationId"
 											],
@@ -1408,7 +2161,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"mainVersionId\": \"{{apiSpecificationVersionId}}\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"mainVersionId\": \"{{apiSpecificationVersionId}}\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1416,12 +2169,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/v1alpha1/api-specifications/:apiSpecificationId",
+											"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
 											"host": [
-												"{{baseUrl}}"
+												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha1",
+												"v1alpha2",
 												"api-specifications",
 												":apiSpecificationId"
 											],
@@ -1443,12 +2196,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications?limit=&skip=&sort=&filter=&count=",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications"
 									],
 									"query": [
@@ -1501,7 +2254,8 @@
 											"    }\r",
 											"});"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1510,7 +2264,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
+									"raw": "{\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1518,12 +2272,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1alpha1/api-specifications",
+									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications",
 									"host": [
-										"{{baseUrl}}"
+										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha1",
+										"v1alpha2",
 										"api-specifications"
 									]
 								}
@@ -1535,6 +2289,51 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "openid users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write",
+				"type": "string"
+			},
+			{
+				"key": "refreshTokenUrl",
+				"value": "{{baseAuthUrl}}/realms/zorgapis/protocol/openid-connect/token",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{baseAuthUrl}}/realms/zorgapis/protocol/openid-connect/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{baseAuthUrl}}/realms/zorgapis/protocol/openid-connect/auth",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
@@ -1557,11 +2356,31 @@
 	],
 	"variable": [
 		{
-			"key": "baseUrl",
+			"key": "baseAuthUrl",
+			"value": "https://auth.sandbox.zorgapis.nl"
+		},
+		{
+			"key": "clientId",
+			"value": "zorgapis.postman"
+		},
+		{
+			"key": "clientSecret",
+			"value": ""
+		},
+		{
+			"key": "baseApiUrl",
 			"value": "https://api.sandbox.zorgapis.nl"
 		},
 		{
 			"key": "organizationId",
+			"value": ""
+		},
+		{
+			"key": "invitationId",
+			"value": ""
+		},
+		{
+			"key": "membershipId",
 			"value": ""
 		},
 		{
