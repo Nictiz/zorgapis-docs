@@ -1,0 +1,29 @@
+﻿{
+  "id": "188c9c2c-ea9e-48fa-8423-5e8e2f60161c",
+  "requirementsVersion": "1.2.0",
+  "rankingLevel": "OPEN_API",
+  "rankings": {
+    "OPEN_API": {
+      "score": 27,
+      "maximumScore": 31
+    },
+    "TECHNICALLY_STANDARDIZED_API": {
+      "score": 6,
+      "maximumScore": 11
+    },
+    "FULLY_STANDARDIZED_API": {
+      "score": 2,
+      "maximumScore": 6
+    }
+  },
+  "requirements": {
+    "SD001": {
+      "conformityType": "CONFORMANT",
+      "remarks": "This is an example text."
+    },
+    "SD001.001": {
+      "conformityType": "CONFORMANT"
+    },
+    ...
+  }
+}

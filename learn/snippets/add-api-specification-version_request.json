@@ -1,0 +1,21 @@
+﻿{
+  "name": "2.0", // (1)!
+  "description": "Verzamelen Huisartsgegevens 2.0",
+  "publishTime": "2020-09-02T00:00:00.000Z", // (2)!
+  "semVer": { // (3)!
+    "major": 2,
+    "minor": 0,
+    "patch": 0
+  },
+  "lifecycleState": "PUBLISHED",
+  "urls": [
+    {
+      "type": "FUNCTIONAL_DESIGN", // (4)!
+      "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens"
+    },
+    {
+      "type": "TECHNICAL_DESIGN",
+      "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data"
+    }
+  ]
+}

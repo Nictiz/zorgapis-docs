@@ -1,0 +1,13 @@
+﻿{
+  "requirementsVersion": "1.2.0", // (1)!
+  "requirements": {
+    "SD001": {
+      "conformityType": "CONFORMANT",
+      "remarks": "This is an example text."
+    },
+    "SD001.001": {
+      "conformityType": "CONFORMANT"
+    },
+    ...
+  }
+}
