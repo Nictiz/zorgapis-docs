@@ -2,9 +2,6 @@
 
 ## Add invitation
 
-View the [API reference](https://oas.zorgapis.nl/#tag/organizations.invitations/operation/addOrganizationInvitation){: target="_blank" }
-or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
-
 === "Request"
 
     ```json
@@ -30,3 +27,11 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
         https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the invitation by the API
         server.
     2.  The status of the invitation. For example, `#!js "PENDING"` or `#!js "ACCEPTED"`.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/organizations.invitations/operation/addOrganizationInvitation){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our sandbox API.
