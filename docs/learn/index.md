@@ -8,6 +8,7 @@ conformity.
 
 <div class="grid cards" markdown>
 
+- :material-shield-lock: **[Authorization](./authorizing-a-request.md)** – Authorize a request
 - :material-clipboard-check: **[API requirements](./getting-api-requirements.md)** – Get API requirements
 - :material-office-building: **[Organizations](./adding-an-organization.md)** – Add organizations
 - :material-api: **[API specifications](./adding-an-api-specification.md)** – Add API specifications and versions
