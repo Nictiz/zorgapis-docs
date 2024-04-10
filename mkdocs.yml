@@ -2,7 +2,7 @@
 site_name: ZorgAPIs Developer Portal
 site_description: API Library for Dutch Healthcare Developer Portal.
 site_author: Nictiz
-site_url: https://nictiz.github.io/zorgapis-docs/
+site_url: https://developer.zorgapis.nl/
 
 # Repository
 repo_url: https://github.com/nictiz/zorgapis-docs
