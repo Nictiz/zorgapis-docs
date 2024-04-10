@@ -2,8 +2,7 @@
 
 ## Get API requirements
 
-View the [API reference](https://oas.zorgapis.nl/#tag/api-requirements-versions.api-requirements/operation/listApiRequirementsVersionApiRequirements){: target="_blank" }
-or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+List all must-have requirements for API specifications with the REST architectural style:
 
 === "Request"
 
@@ -36,3 +35,11 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
     3.  The perspective types that apply to the API requirement.
     4.  The architectural styles that apply to the API requirement.
     5.  The standardization levels that apply to the API requirement.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-requirements-versions.api-requirements/operation/listApiRequirementsVersionApiRequirements){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our sandbox API.
