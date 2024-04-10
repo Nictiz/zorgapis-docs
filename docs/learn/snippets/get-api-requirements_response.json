@@ -7,13 +7,13 @@
     "requirementLevel": "MUST",
     "score": 1,
     "category": "API_SPECIFICATION_AND_DOCUMENTATION",
-    "roles": [
+    "roles": [ // (2)!
       "API_SPECIFIER"
     ],
-    "perspectiveTypes": [
+    "perspectiveTypes": [ // (3)!
       "API_SPECIFICATION"
     ],
-    "architecturalStyles": [
+    "architecturalStyles": [ // (4)!
       "REST",
       "SOAP",
       "GRAPHQL",
@@ -21,7 +21,7 @@
       "GRPC",
       "OTHER"
     ],
-    "standardizationLevels": [
+    "standardizationLevels": [ // (5)!
       "OPEN_API",
       "TECHNICALLY_STANDARDIZED_API",
       "FULLY_STANDARDIZED_API"

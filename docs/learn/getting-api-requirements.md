@@ -16,9 +16,9 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
         ) HTTP/1.1
     ```
 
-    1.  The requirement level must be equal to `MUST`.
-    2.  The perspective types must include `API_SPECIFICATION`.
-    3.  The architectural styles must include `REST`.
+    1.  The requirement level must be equal to `#!js "MUST"`.
+    2.  The perspective types must include `#!js "API_SPECIFICATION"`.
+    3.  The architectural styles must include `#!js "REST"`.
 
 === "Response"
 
@@ -32,3 +32,7 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
         https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the API requirement by the API
         server.
+    2.  The roles that apply to the API requirement.
+    3.  The perspective types that apply to the API requirement.
+    4.  The architectural styles that apply to the API requirement.
+    5.  The standardization levels that apply to the API requirement.
