@@ -2,6 +2,9 @@
 
 ## Add API specification
 
+View the [API reference](https://oas.zorgapis.nl/#tag/api-specifications/operation/addApiSpecification){: target="_blank" }
+or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+
 === "Request"
 
     ```json hl_lines="8"
@@ -31,6 +34,9 @@
         API server.
 
 ## Add API specification version
+
+View the [API reference](https://oas.zorgapis.nl/#tag/api-specifications.versions/operation/addApiSpecificationVersion){: target="_blank" }
+or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
 
 === "Request"
 
@@ -72,6 +78,9 @@
 
 ## Add declaration of conformity
 
+View the [API reference](https://oas.zorgapis.nl/#tag/api-specifications.versions.declarations-of-conformity/operation/addApiSpecificationVersionDeclarationOfConformity){: target="_blank" }
+or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+
 === "Request"
 
     ```json
@@ -94,6 +103,9 @@
     ```
 
 ## Set API specification main version
+
+View the [API reference](https://oas.zorgapis.nl/#tag/api-specifications/operation/updateApiSpecification){: target="_blank" }
+or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
 
 === "Request"
 
