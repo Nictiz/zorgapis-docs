@@ -2,9 +2,6 @@
 
 ## Add organization
 
-View the [API reference](https://oas.zorgapis.nl/#tag/organizations/operation/addOrganization){: target="_blank" }
-or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
-
 === "Request"
 
     ```json
@@ -28,3 +25,11 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
         https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the organization by the API
         server.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/organizations/operation/addOrganization){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our sandbox API.
