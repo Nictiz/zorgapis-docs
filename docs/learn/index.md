@@ -11,5 +11,6 @@ conformity.
 - :material-clipboard-check: **[API requirements](./getting-api-requirements.md)** – Get API requirements
 - :material-office-building: **[Organizations](./adding-an-organization.md)** – Add organizations
 - :material-api: **[API specifications](./adding-an-api-specification.md)** – Add API specifications and versions
+- :material-account-plus: **[Invitations](./inviting-a-user-to-an-organization.md)** – Invite users to an organization
 
 </div>
