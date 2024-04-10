@@ -127,6 +127,7 @@ nav:
       - Getting API requirements: learn/getting-api-requirements.md
       - Adding an organization: learn/adding-an-organization.md
       - Adding an API specification: learn/adding-an-api-specification.md
+      - Inviting a user to an organization: learn/inviting-a-user-to-an-organization.md
   - Play:
     - play/index.md
   - Code: code/index.md

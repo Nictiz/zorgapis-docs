@@ -1,0 +1,5 @@
+﻿{
+  "id": "88411780-1d25-4bc3-86a5-f2f901d9a900", // (1)!
+  "emailAddress": "john.doe@nictiz.nl",
+  "status": "PENDING" // (2)!
+}
