@@ -12,5 +12,7 @@ conformity.
 - :material-office-building: **[Organizations](./adding-an-organization.md)** – Add organizations
 - :material-api: **[API specifications](./adding-an-api-specification.md)** – Add API specifications and versions
 - :material-account-plus: **[Invitations](./inviting-a-user-to-an-organization.md)** – Invite users to an organization
+- :material-account-check: **[Accept invitations](./accepting-an-invitation-to-join-an-organization.md)** – Accept
+  pending invitations for an organization
 
 </div>
