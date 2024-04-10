@@ -124,6 +124,7 @@ nav:
     - Nictiz: nictiz.md
   - Learn:
       - learn/index.md
+      - Getting API requirements: learn/getting-api-requirements.md
       - Adding an organization: learn/adding-an-organization.md
       - Adding an API specification: learn/adding-an-api-specification.md
   - Play:

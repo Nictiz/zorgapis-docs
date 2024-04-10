@@ -1,0 +1,31 @@
+﻿[
+  {
+    "id": "516033cb-06a4-4312-8874-dfbed689760f", // (1)!
+    "code": "SD001",
+    "description": "API documentation MUST be publicly and freely available",
+    "url": "https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd001-api-documentation-must-be-publicly-and-freely-available",
+    "requirementLevel": "MUST",
+    "score": 1,
+    "category": "API_SPECIFICATION_AND_DOCUMENTATION",
+    "roles": [
+      "API_SPECIFIER"
+    ],
+    "perspectiveTypes": [
+      "API_SPECIFICATION"
+    ],
+    "architecturalStyles": [
+      "REST",
+      "SOAP",
+      "GRAPHQL",
+      "ODATA",
+      "GRPC",
+      "OTHER"
+    ],
+    "standardizationLevels": [
+      "OPEN_API",
+      "TECHNICALLY_STANDARDIZED_API",
+      "FULLY_STANDARDIZED_API"
+    ]
+  },
+  ...
+]

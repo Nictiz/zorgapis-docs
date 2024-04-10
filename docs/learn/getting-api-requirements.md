@@ -1,0 +1,34 @@
+﻿# Getting API requirements
+
+## Get API requirements
+
+View the [API reference](https://oas.zorgapis.nl/#tag/api-requirements-versions.api-requirements/operation/listApiRequirementsVersionApiRequirements){: target="_blank" }
+or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+
+=== "Request"
+
+    ```json
+    GET https://api.sandbox.zorgapis.nl/v1alpha2/api-requirements-versions/1.2.0/api-requirements
+        ?filter=and(
+            eq(requirementLevel,"MUST"), // (1)!
+            any(perspectiveTypes,eq($it,"API_SPECIFICATION")), // (2)!
+            any(architecturalStyles,eq($it,"REST")), // (3)!
+        ) HTTP/1.1
+    ```
+
+    1.  The requirement level must be equal to `MUST`.
+    2.  The perspective types must include `API_SPECIFICATION`.
+    3.  The architectural styles must include `REST`.
+
+=== "Response"
+
+    ```json hl_lines="6"
+    HTTP/1.1 201 Created
+    Content-Type: application/json
+
+    --8<-- "learn/snippets/get-api-requirements_response.json"
+    ```
+
+    1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
+        https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the API requirement by the API
+        server.
