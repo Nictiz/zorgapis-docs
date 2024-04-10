@@ -5,7 +5,7 @@
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha1/organizations HTTP/1.1
+    POST https://api.sandbox.zorgapis.nl/v1alpha2/organizations HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-organization_request.json"

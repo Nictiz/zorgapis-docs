@@ -5,7 +5,7 @@
 === "Request"
 
     ```json hl_lines="8"
-    POST https://api.sandbox.zorgapis.nl/v1alpha1/api-specifications HTTP/1.1
+    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-api-specification_request.json"
@@ -35,7 +35,7 @@
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
+    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-api-specification-version_request.json"
@@ -75,7 +75,7 @@
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
+    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-declaration-of-conformity_request.json"
@@ -98,7 +98,7 @@
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.sandbox.zorgapis.nl/v1alpha1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
+    PATCH https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/set-api-specification-main-version_request.json"
