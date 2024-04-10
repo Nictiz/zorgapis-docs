@@ -109,7 +109,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: docs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
@@ -124,6 +128,7 @@ nav:
     - Nictiz: nictiz.md
   - Learn:
       - learn/index.md
+      - Authorizing a request: learn/authorizing-a-request.md
       - Getting API requirements: learn/getting-api-requirements.md
       - Adding an organization: learn/adding-an-organization.md
       - Adding an API specification: learn/adding-an-api-specification.md
