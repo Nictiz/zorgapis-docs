@@ -1,5 +1,16 @@
 ﻿# Authorizing a request
 
+ZorgAPIs API uses OAuth 2.0 to ensure that client requests access data securely. With OAuth 2.0, you first retrieve an
+access token for the API, then use that token to authenticate future requests.
+
+!!! note
+
+    When exploring our sandbox API, fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and select **Get New Access Token** in the **Authorization** tab of a request. Postman will automatically populate
+    the relevant parts of the request. To learn more, go to [Authenticate with OAuth 2.0 authentication in Postman](
+    https://learning.postman.com/docs/sending-requests/authorization/oauth-20){: target="_blank" }.
+
 ## How the Authorization Code flow works
 
 The example diagram below illustrates the interactions that occur during the [OAuth 2.0 Authorization Code Grant](
