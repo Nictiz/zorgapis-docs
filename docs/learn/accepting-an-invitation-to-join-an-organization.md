@@ -2,9 +2,6 @@
 
 ## Get pending invitations
 
-View the [API reference](https://oas.zorgapis.nl/#tag/users.invitations/operation/listUserInvitations){: target="_blank" }
-or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
-
 === "Request"
 
     ```json
@@ -20,10 +17,15 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
     --8<-- "learn/snippets/get-pending-invitations_response.json"
     ```
 
-## Accept pending invitation
+!!! note
 
-View the [API reference](https://oas.zorgapis.nl/#tag/users.invitations/operation/acceptUserInvitation){: target="_blank" }
-or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/users.invitations/operation/listUserInvitations){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our sandbox API.
+
+## Accept pending invitation
 
 === "Request"
 
@@ -42,3 +44,11 @@ or [try in Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collecti
 
     1.  The date and time (formatted as per [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){: target="_blank" }) at
         which the user responded to the invitation.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/users.invitations/operation/acceptUserInvitation){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our sandbox API.
