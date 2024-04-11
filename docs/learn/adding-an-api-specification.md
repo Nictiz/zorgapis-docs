@@ -1,5 +1,20 @@
 ﻿# Adding an API specification
 
+## Entity relationship diagram
+
+``` mermaid
+erDiagram
+  API-SPECIFICATION ||--o{ VERSION : contains
+  VERSION ||--o{ DECLARATION-OF-CONFORMITY : contains
+  API-SPECIFICATION }o..|| ORGANIZATION : references
+```
+
+!!! info
+
+    - Exactly one `API-SPECIFICATION` *contains* zero or more `VERSION`
+    - Exactly one `VERSION` *contains* zero or more `DECLARATION-OF-CONFORMITY`
+    - Zero or more `API-SPECIFICATION` *references* exactly one `ORGANIZATION`
+
 ## Add API specification
 
 === "Request"
