@@ -1,0 +1,12 @@
+﻿[
+  {
+    "id": "88411780-1d25-4bc3-86a5-f2f901d9a900",
+    "organizationId": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+    "organization": {
+      "id": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+      "name": "Stichting MedMij"
+    },
+    "emailAddress": "john.doe@nictiz.nl",
+    "status": "PENDING"
+  }
+]
