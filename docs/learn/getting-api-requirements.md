@@ -1,5 +1,16 @@
 ﻿# Getting API requirements
 
+## Entity relationship diagram
+
+``` mermaid
+erDiagram
+  API-REQUIREMENTS-VERSION ||--o{ API-REQUIREMENT : contains
+```
+
+!!! info
+
+    - Exactly one `API-REQUIREMENTS-VERSION` *contains* zero or more `API-REQUIREMENT`
+
 ## Get API requirements
 
 List all must-have requirements for API specifications with the REST architectural style:
