@@ -1,5 +1,22 @@
 ﻿# Accepting an invitation to join an organization
 
+## Entity relationship diagram
+
+``` mermaid
+erDiagram
+  USER ||--o{ INVITATION : contains
+  USER ||--o{ MEMBERSHIP : contains
+  INVITATION ||..|| ORGANIZATION : references
+  MEMBERSHIP ||..|| ORGANIZATION : references
+```
+
+!!! info
+
+    - Exactly one `USER` *contains* zero or more `INVITATION`
+    - Exactly one `USER` *contains* zero or more `MEMBERSHIP`
+    - Exactly one `INVITATION` *references* exactly one `ORGANIZATION`
+    - Exactly one `MEMBERSHIP` *references* exactly one `ORGANIZATION`
+
 ## Get pending invitations
 
 === "Request"
