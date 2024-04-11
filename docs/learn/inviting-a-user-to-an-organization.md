@@ -6,12 +6,16 @@
 erDiagram
   ORGANIZATION ||--o{ INVITATION : contains
   ORGANIZATION ||--|{ MEMBERSHIP : contains
+  INVITATION ||..o| USER : references
+  MEMBERSHIP ||..|| USER : references
 ```
 
 !!! info
 
     - Exactly one `ORGANIZATION` *contains* zero or more `INVITATION`
     - Exactly one `ORGANIZATION` *contains* one or more `MEMBERSHIP`
+    - Exactly one `INVITATION` *references* zero or one `USER`
+    - Exactly one `MEMBERSHIP` *references* exactly one `USER`
 
 ## Add invitation
 
