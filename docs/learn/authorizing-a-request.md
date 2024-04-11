@@ -11,6 +11,9 @@ access token for the API, then use that token to authenticate future requests.
     the relevant parts of the request. To learn more, go to [Authenticate with OAuth 2.0 authentication in Postman](
     https://learning.postman.com/docs/sending-requests/authorization/oauth-20){: target="_blank" }.
 
+    [Register](https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/registrations?response_type=code&client_id=zorgapis.docs&redirect_uri=https%3A%2F%2Fdeveloper.zorgapis.nl){ .md-button .md-button--primary }
+    [Log out](https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/logout){ .md-button }
+
 ## How the Authorization Code flow works
 
 The example diagram below illustrates the interactions that occur during the [OAuth 2.0 Authorization Code Grant](
