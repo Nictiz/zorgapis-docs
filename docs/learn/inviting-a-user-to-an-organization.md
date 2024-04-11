@@ -1,5 +1,18 @@
 ﻿# Inviting a user to an organization
 
+## Entity relationship diagram
+
+``` mermaid
+erDiagram
+  ORGANIZATION ||--o{ INVITATION : contains
+  ORGANIZATION ||--|{ MEMBERSHIP : contains
+```
+
+!!! info
+
+    - Exactly one `ORGANIZATION` *contains* zero or more `INVITATION`
+    - Exactly one `ORGANIZATION` *contains* one or more `MEMBERSHIP`
+
 ## Add invitation
 
 === "Request"
