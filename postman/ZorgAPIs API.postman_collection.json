@@ -3,8 +3,8 @@
 		"_postman_id": "c22bf5f5-a2ec-40df-86a2-7817de5c7203",
 		"name": "ZorgAPIs API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32862681",
-		"_collection_link": "https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203?action=share&source=collection_link&creator=32862681"
+		"_exporter_id": "32862395",
+		"_collection_link": "https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203?action=share&source=collection_link&creator=32862395"
 	},
 	"item": [
 		{
@@ -2292,6 +2292,16 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": [
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/callback",
+				"type": "string"
+			},
 			{
 				"key": "scope",
 				"value": "openid users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write",
