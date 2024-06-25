@@ -4,10 +4,10 @@ ZorgAPIs API enables the creation of applications that can interact with the [AP
 https://www.zorgapis.nl/){: target="_blank" }, such as retrieving API requirements, creating and managing organizations
 and API specifications, or publishing declarations of conformity.
 
-!!! note
+!!! tip
 
-    Utilize our [sandbox environment](../play/index.md) to ensure your integrations are seamless and robust before
-    publishing data to the production environment.
+    Utilize our [sandbox API](../play/index.md) to ensure your integrations are seamless and robust before publishing
+    data to the production environment.
 
 ## Getting started
 
