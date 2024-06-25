@@ -1,8 +1,8 @@
 ﻿# Learn
 
-ZorgAPIs API enables the creation of applications that can interact with the API Library for Dutch Healthcare, such as
-retrieving API requirements, creating and managing organizations and API specifications, or publishing declarations of
-conformity.
+ZorgAPIs API enables the creation of applications that can interact with the [API Library for Dutch Healthcare](
+https://www.zorgapis.nl/){: target="_blank" }, such as retrieving API requirements, creating and managing organizations
+and API specifications, or publishing declarations of conformity.
 
 ## Getting started
 
