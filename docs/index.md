@@ -15,11 +15,15 @@ strategy focuses on the development of APIs towards fully standardized data exch
 
     ---
 
+    Definition of the ZorgAPIs API.
+
     [:octicons-arrow-right-24: API reference](https://nictiz.github.io/zorgapis-openapi-specification/){: target="_blank" }
 
 -   :simple-postman:{ .lg .middle } &nbsp; **Postman Collection**
 
     ---
+
+    Fork our Postman Collection.
 
     [:octicons-arrow-right-24: Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
 
