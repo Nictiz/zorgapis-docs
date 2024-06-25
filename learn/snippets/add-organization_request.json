@@ -1,0 +1,16 @@
+﻿{
+  "name": "Stichting MedMij", // (1)!
+  "description": "MedMij is the standard in the Netherlands for the secure exchange of health data between care users and care providers.",
+  "website": "https://medmij.nl/",
+  "emailAddress": "info@medmij.nl",
+  "phoneNumber": "+31 (0)85 303 4959",
+  "address": {
+    "street": "Maanweg",
+    "houseNumber": 174,
+    "addressLine2": "Building C/3rd floor",
+    "postalCode": "2516 AB",
+    "city": "The Hague",
+    "stateOrRegion": "South Holland",
+    "country": "NL"
+  }
+}
