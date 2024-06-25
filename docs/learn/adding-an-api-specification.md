@@ -20,7 +20,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="8"
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/api-specifications HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-api-specification_request.json"
@@ -51,14 +51,14 @@ erDiagram
     https://oas.zorgapis.nl/#tag/api-specifications/operation/addApiSpecification){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.
 
 ## Add API specification version
 
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-api-specification-version_request.json"
@@ -99,14 +99,14 @@ erDiagram
     https://oas.zorgapis.nl/#tag/api-specifications.versions/operation/addApiSpecificationVersion){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.
 
 ## Add declaration of conformity
 
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-declaration-of-conformity_request.json"
@@ -130,14 +130,14 @@ erDiagram
     https://oas.zorgapis.nl/#tag/api-specifications.versions.declarations-of-conformity/operation/addApiSpecificationVersionDeclarationOfConformity){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.
 
 ## Set API specification main version
 
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.sandbox.zorgapis.nl/v1alpha2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/set-api-specification-main-version_request.json"
@@ -158,4 +158,4 @@ erDiagram
     https://oas.zorgapis.nl/#tag/api-specifications/operation/updateApiSpecification){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.

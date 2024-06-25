@@ -22,7 +22,7 @@ erDiagram
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/organizations/4a7c2c17-6514-46f8-aa05-6a22fb18b4ad/invitations HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/organizations/4a7c2c17-6514-46f8-aa05-6a22fb18b4ad/invitations HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-invitation_request.json"
@@ -51,4 +51,4 @@ erDiagram
     https://oas.zorgapis.nl/#tag/organizations.invitations/operation/addOrganizationInvitation){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.

@@ -54,12 +54,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/organizations",
+									"raw": "{{baseApiUrl}}/v1beta1/organizations",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"organizations"
 									]
 								}
@@ -112,12 +112,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications"
 									]
 								}
@@ -165,12 +165,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications",
 										":apiSpecificationId",
 										"versions"
@@ -226,12 +226,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications",
 										":apiSpecificationId",
 										"versions",
@@ -267,12 +267,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications",
 										":apiSpecificationId"
 									],
@@ -333,12 +333,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations",
+									"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/invitations",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"organizations",
 										":organizationId",
 										"invitations"
@@ -394,12 +394,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations?limit=&skip=&sort=&filter=eq(status,\"PENDING\")&count=",
+									"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations?limit=&skip=&sort=&filter=eq(status,\"PENDING\")&count=",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"users",
 										"me",
 										"invitations"
@@ -436,12 +436,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+									"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations/:invitationIdAction",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"users",
 										"me",
 										"invitations",
@@ -462,7 +462,7 @@
 			]
 		},
 		{
-			"name": "v1alpha2",
+			"name": "v1beta1",
 			"item": [
 				{
 					"name": "users",
@@ -482,12 +482,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationId",
+															"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations/:invitationId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"users",
 																"me",
 																"invitations",
@@ -509,12 +509,12 @@
 														"method": "POST",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+															"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations/:invitationIdAction",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"users",
 																"me",
 																"invitations",
@@ -536,12 +536,12 @@
 														"method": "POST",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations/:invitationIdAction",
+															"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations/:invitationIdAction",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"users",
 																"me",
 																"invitations",
@@ -565,12 +565,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/users/me/invitations?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/users/me/invitations?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"users",
 														"me",
 														"invitations"
@@ -615,12 +615,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships/:membershipId",
+															"raw": "{{baseApiUrl}}/v1beta1/users/me/memberships/:membershipId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"users",
 																"me",
 																"memberships",
@@ -642,12 +642,12 @@
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships/:membershipId",
+															"raw": "{{baseApiUrl}}/v1beta1/users/me/memberships/:membershipId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"users",
 																"me",
 																"memberships",
@@ -671,12 +671,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/users/me/memberships?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/users/me/memberships?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"users",
 														"me",
 														"memberships"
@@ -715,12 +715,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/users/me",
+											"raw": "{{baseApiUrl}}/v1beta1/users/me",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"users",
 												"me"
 											]
@@ -750,12 +750,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations/:invitationId",
+															"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/invitations/:invitationId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"organizations",
 																":organizationId",
 																"invitations",
@@ -781,12 +781,12 @@
 														"method": "POST",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations/:invitationIdAction",
+															"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/invitations/:invitationIdAction",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"organizations",
 																":organizationId",
 																"invitations",
@@ -814,12 +814,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/invitations?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"organizations",
 														":organizationId",
 														"invitations"
@@ -898,12 +898,12 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/invitations",
+													"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/invitations",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"organizations",
 														":organizationId",
 														"invitations"
@@ -932,12 +932,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships/:membershipId",
+															"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/memberships/:membershipId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"organizations",
 																":organizationId",
 																"memberships",
@@ -963,12 +963,12 @@
 														"method": "DELETE",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships/:membershipId",
+															"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/memberships/:membershipId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"organizations",
 																":organizationId",
 																"memberships",
@@ -996,12 +996,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId/memberships?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId/memberships?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"organizations",
 														":organizationId",
 														"memberships"
@@ -1046,12 +1046,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId",
+											"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"organizations",
 												":organizationId"
 											],
@@ -1080,12 +1080,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/organizations/:organizationId",
+											"raw": "{{baseApiUrl}}/v1beta1/organizations/:organizationId",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"organizations",
 												":organizationId"
 											],
@@ -1107,12 +1107,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/organizations?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1beta1/organizations?limit=&skip=&sort=&filter=&count=",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"organizations"
 									],
 									"query": [
@@ -1182,12 +1182,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/organizations",
+									"raw": "{{baseApiUrl}}/v1beta1/organizations",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"organizations"
 									]
 								}
@@ -1211,12 +1211,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"api-requirements-versions",
 														":versionName",
 														"api-requirements"
@@ -1258,12 +1258,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))&count=",
+															"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"REST\")))&count=",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"api-requirements-versions",
 																":versionName",
 																"api-requirements"
@@ -1309,12 +1309,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))&count=",
+															"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions/:versionName/api-requirements?limit=&skip=&sort=&filter=and(any(perspectiveTypes,eq($it,\"API_SPECIFICATION\")),any(architecturalStyles,eq($it,\"SOAP\")))&count=",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"api-requirements-versions",
 																":versionName",
 																"api-requirements"
@@ -1364,12 +1364,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName",
+											"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions/:versionName",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"api-requirements-versions",
 												":versionName"
 											],
@@ -1398,12 +1398,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions/:versionName",
+											"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions/:versionName",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"api-requirements-versions",
 												":versionName"
 											],
@@ -1425,12 +1425,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions?limit=&skip=&sort=&filter=&count=",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-requirements-versions"
 									],
 									"query": [
@@ -1500,12 +1500,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-requirements-versions",
+									"raw": "{{baseApiUrl}}/v1beta1/api-requirements-versions",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-requirements-versions"
 									]
 								}
@@ -1538,12 +1538,12 @@
 																		"method": "GET",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
 																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha2",
+																				"v1beta1",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -1584,12 +1584,12 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
 																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha2",
+																				"v1beta1",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -1621,12 +1621,12 @@
 																		"method": "DELETE",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/urls/:urlId",
 																			"host": [
 																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha2",
+																				"v1beta1",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -1660,12 +1660,12 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls?limit=&skip=&sort=&filter=&count=",
+																	"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/urls?limit=&skip=&sort=&filter=&count=",
 																	"host": [
 																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha2",
+																		"v1beta1",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1749,12 +1749,12 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/urls",
+																	"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/urls",
 																	"host": [
 																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha2",
+																		"v1beta1",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1789,12 +1789,12 @@
 																		"method": "GET",
 																		"header": [],
 																		"url": {
-																			"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity/:declarationOfConformityId",
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity/:declarationOfConformityId",
 																			"host": [
 																				"{{baseApiUrl}}"
 																			],
 																			"path": [
-																				"v1alpha2",
+																				"v1beta1",
 																				"api-specifications",
 																				":apiSpecificationId",
 																				"versions",
@@ -1828,12 +1828,12 @@
 																"method": "GET",
 																"header": [],
 																"url": {
-																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity?limit=&skip=&sort=&filter=&count=",
+																	"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity?limit=&skip=&sort=&filter=&count=",
 																	"host": [
 																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha2",
+																		"v1beta1",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1917,12 +1917,12 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
+																	"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/declarations-of-conformity",
 																	"host": [
 																		"{{baseApiUrl}}"
 																	],
 																	"path": [
-																		"v1alpha2",
+																		"v1beta1",
 																		"api-specifications",
 																		":apiSpecificationId",
 																		"versions",
@@ -1951,12 +1951,12 @@
 														"method": "GET",
 														"header": [],
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId",
+															"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"api-specifications",
 																":apiSpecificationId",
 																"versions",
@@ -1991,12 +1991,12 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions/:versionId",
+															"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId",
 															"host": [
 																"{{baseApiUrl}}"
 															],
 															"path": [
-																"v1alpha2",
+																"v1beta1",
 																"api-specifications",
 																":apiSpecificationId",
 																"versions",
@@ -2024,12 +2024,12 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions?limit=&skip=&sort=&filter=&count=",
+													"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions?limit=&skip=&sort=&filter=&count=",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"api-specifications",
 														":apiSpecificationId",
 														"versions"
@@ -2107,12 +2107,12 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId/versions",
+													"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions",
 													"host": [
 														"{{baseApiUrl}}"
 													],
 													"path": [
-														"v1alpha2",
+														"v1beta1",
 														"api-specifications",
 														":apiSpecificationId",
 														"versions"
@@ -2135,12 +2135,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
+											"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"api-specifications",
 												":apiSpecificationId"
 											],
@@ -2169,12 +2169,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseApiUrl}}/v1alpha2/api-specifications/:apiSpecificationId",
+											"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId",
 											"host": [
 												"{{baseApiUrl}}"
 											],
 											"path": [
-												"v1alpha2",
+												"v1beta1",
 												"api-specifications",
 												":apiSpecificationId"
 											],
@@ -2196,12 +2196,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications?limit=&skip=&sort=&filter=&count=",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications?limit=&skip=&sort=&filter=&count=",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications"
 									],
 									"query": [
@@ -2272,12 +2272,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseApiUrl}}/v1alpha2/api-specifications",
+									"raw": "{{baseApiUrl}}/v1beta1/api-specifications",
 									"host": [
 										"{{baseApiUrl}}"
 									],
 									"path": [
-										"v1alpha2",
+										"v1beta1",
 										"api-specifications"
 									]
 								}
@@ -2367,7 +2367,7 @@
 	"variable": [
 		{
 			"key": "baseAuthUrl",
-			"value": "https://auth.sandbox.zorgapis.nl"
+			"value": "https://auth.zorgapis.nl"
 		},
 		{
 			"key": "clientId",
@@ -2379,7 +2379,7 @@
 		},
 		{
 			"key": "baseApiUrl",
-			"value": "https://api.sandbox.zorgapis.nl"
+			"value": "https://api.zorgapis.nl"
 		},
 		{
 			"key": "organizationId",

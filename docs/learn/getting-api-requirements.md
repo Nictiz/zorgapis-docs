@@ -18,7 +18,7 @@ List all must-have requirements for API specifications with the REST architectur
 === "Request"
 
     ```json
-    GET https://api.sandbox.zorgapis.nl/v1alpha2/api-requirements-versions/1.2.0/api-requirements
+    GET https://api.zorgapis.nl/v1beta1/api-requirements-versions/1.2.0/api-requirements
         ?filter=and(
             eq(requirementLevel,"MUST"), // (1)!
             any(perspectiveTypes,eq($it,"API_SPECIFICATION")), // (2)!
@@ -53,4 +53,4 @@ List all must-have requirements for API specifications with the REST architectur
     https://oas.zorgapis.nl/#tag/api-requirements-versions.api-requirements/operation/listApiRequirementsVersionApiRequirements){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.

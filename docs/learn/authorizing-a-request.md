@@ -3,16 +3,16 @@
 ZorgAPIs API uses OAuth 2.0 to ensure that client requests access data securely. With OAuth 2.0, you first retrieve an
 access token for the API, then use that token to authenticate future requests.
 
-!!! note
+!!! info
 
-    When exploring our sandbox API, fork our [Postman Collection](
+    When exploring our API, fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
     and select **Get New Access Token** in the **Authorization** tab of a request. Postman will automatically populate
     the relevant parts of the request. To learn more, go to [Authenticate with OAuth 2.0 authentication in Postman](
     https://learning.postman.com/docs/sending-requests/authorization/oauth-20){: target="_blank" }.
 
-    [Register](https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/registrations?response_type=code&client_id=zorgapis.docs&redirect_uri=https%3A%2F%2Fdeveloper.zorgapis.nl){ .md-button .md-button--primary }
-    [Log out](https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/logout){ .md-button }
+    [Register](https://auth.zorgapis.nl/realms/zorgapis/protocol/openid-connect/registrations?response_type=code&client_id=zorgapis.docs&redirect_uri=https%3A%2F%2Fdeveloper.zorgapis.nl){ .md-button .md-button--primary }
+    [Log out](https://auth.zorgapis.nl/realms/zorgapis/protocol/openid-connect/logout){ .md-button }
 
 ## How the Authorization Code flow works
 
@@ -53,7 +53,7 @@ sequenceDiagram
 1. A user tries to access the application (the client)
 2. The application redirects to the authorization server's `auth` endpoint
     ```html
-    https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/auth
+    https://auth.zorgapis.nl/realms/zorgapis/protocol/openid-connect/auth
         ?response_type=code
         &client_id=<client-id> <!-- (1)! -->
         &redirect_uri=<redirect-uri> <!-- (2)! -->
@@ -70,7 +70,7 @@ sequenceDiagram
 5. The authorization server issues an authorization code to the application
 6. The application requests an access token from the `token` endpoint
     ```html
-    POST https://auth.sandbox.zorgapis.nl/realms/zorgapis/protocol/openid-connect/token
+    POST https://auth.zorgapis.nl/realms/zorgapis/protocol/openid-connect/token
         ?grant_type=authorization_code
         &client_id=<client-id>
         &client_secret=<secret>

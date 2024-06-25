@@ -22,7 +22,7 @@ erDiagram
 === "Request"
 
     ```json
-    GET https://api.sandbox.zorgapis.nl/v1alpha2/users/me/invitations?filter=eq(status,"PENDING") HTTP/1.1
+    GET https://api.zorgapis.nl/v1beta1/users/me/invitations?filter=eq(status,"PENDING") HTTP/1.1
     ```
 
 === "Response"
@@ -40,14 +40,14 @@ erDiagram
     https://oas.zorgapis.nl/#tag/users.invitations/operation/listUserInvitations){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.
 
 ## Accept pending invitation
 
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/users/me/invitations/88411780-1d25-4bc3-86a5-f2f901d9a900:accept HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/users/me/invitations/88411780-1d25-4bc3-86a5-f2f901d9a900:accept HTTP/1.1
     ```
 
 === "Response"
@@ -68,4 +68,4 @@ erDiagram
     https://oas.zorgapis.nl/#tag/users.invitations/operation/acceptUserInvitation){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
-    and explore our sandbox API.
+    and explore our API.
