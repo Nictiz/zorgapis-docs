@@ -22,7 +22,7 @@ erDiagram
 === "Request"
 
     ```json
-    GET https://api.sandbox.zorgapis.nl/v1alpha2/users/me/invitations?filter=eq(status,"PENDING") HTTP/1.1
+    GET https://api.zorgapis.nl/v1beta1/users/me/invitations?filter=eq(status,"PENDING") HTTP/1.1
     ```
 
 === "Response"
@@ -47,7 +47,7 @@ erDiagram
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/users/me/invitations/88411780-1d25-4bc3-86a5-f2f901d9a900:accept HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/users/me/invitations/88411780-1d25-4bc3-86a5-f2f901d9a900:accept HTTP/1.1
     ```
 
 === "Response"

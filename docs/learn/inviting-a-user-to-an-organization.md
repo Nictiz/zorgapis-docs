@@ -22,7 +22,7 @@ erDiagram
 === "Request"
 
     ```json
-    POST https://api.sandbox.zorgapis.nl/v1alpha2/organizations/4a7c2c17-6514-46f8-aa05-6a22fb18b4ad/invitations HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta1/organizations/4a7c2c17-6514-46f8-aa05-6a22fb18b4ad/invitations HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/snippets/add-invitation_request.json"
