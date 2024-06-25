@@ -5,7 +5,9 @@ for an Integrated Health Information System. That is why [Nictiz](./nictiz.md), 
 [Ministry of Health, Welfare and Sport](
 https://www.government.nl/ministries/ministry-of-health-welfare-and-sport){: target="_blank" } and stakeholders, has
 developed an [API strategy](https://nictiz.github.io/api-strategie-docs/){: target="_blank" } for Dutch healthcare. This
-strategy focuses on the development of APIs towards fully standardized data exchanges.
+strategy focuses on the development of APIs towards fully standardized data exchanges.  The [API Library](
+https://www.zorgapis.nl/){: target="_blank" } promotes the findability of APIs that meet the requirements at a
+particular level of standardization.
 
 ## Resources
 
