@@ -103,6 +103,13 @@ erDiagram
 
 ## Add declaration of conformity
 
+!!! warning
+
+    When you claim compliance with standards, specifications, guidelines, practices, policies, or laws, you MUST provide
+    evidence supporting these claims. Evidence may include URLs to official third-party validation reports or audits.
+
+    See [SD010](https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd010-when-documentation-claims-compliance-to-standards-specifications-guidelines-and-practices-policies-or-law-documentation-must-provide-references-to-evidence-to-back-up-these-claims){: target="_blank" }.
+
 === "Request"
 
     ```json
@@ -114,6 +121,10 @@ erDiagram
 
     1.  The name of the API requirements version, for example `#!js "1.2.0"`, against which to validate this version of
         the API specification.
+    2.  Conformity evaluation has passed, the resource is conformant.
+    3.  Conformity evaluation has not passed, the resource is not conformant.
+    4.  Conformity has not been evaluated.
+    5.  Conformity evaluation is not applicable to the resource.
 
 === "Response"
 
