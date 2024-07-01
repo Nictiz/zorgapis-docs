@@ -110,6 +110,12 @@ erDiagram
 
     See [SD010](https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd010-when-documentation-claims-compliance-to-standards-specifications-guidelines-and-practices-policies-or-law-documentation-must-provide-references-to-evidence-to-back-up-these-claims){: target="_blank" }.
 
+!!! note
+
+    [Markdown](https://www.markdownguide.org/basic-syntax/){: target="_blank" } is supported for the `remarks` field.
+    You can use Markdown syntax to format text, include links and more to enhance the readability and organization of
+    your remarks.
+
 === "Request"
 
     ```json
