@@ -103,9 +103,9 @@ erDiagram
 
 ## Add declaration of conformity
 
-This section guides you through the process of validating your API specification against the [requirements for APIs in
-Dutch Healthcare](https://www.zorgapis.nl/en/api-requirements){: target="_blank" }. As part of this process, you will
-perform a self-assessment to determine whether your API specification is conformant.
+This section guides you through the process of validating your API specification against the
+[requirements for APIs in Dutch Healthcare](https://www.zorgapis.nl/en/api-requirements?perspectiveTypes=API_SPECIFICATION){: target="_blank" }.
+As part of this process, you will perform a self-assessment to determine whether your API specification is conformant.
 
 ### The importance of transparency
 
@@ -117,7 +117,7 @@ based on the provided evidence.
 
 !!! warning
 
-    You must [provide evicende](#providing-evidence) supporting compliance claims. Detailed documentation helps maintain
+    You must [provide evidence](#providing-evidence) supporting compliance claims. Detailed documentation helps maintain
     the integrity and credibility of your declaration.
 
 ### Declarations are immutable
