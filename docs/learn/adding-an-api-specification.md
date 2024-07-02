@@ -103,18 +103,51 @@ erDiagram
 
 ## Add declaration of conformity
 
+This section guides you through the process of validating your API specification against the [requirements for APIs in
+Dutch Healthcare](https://www.zorgapis.nl/en/api-requirements){: target="_blank" }. As part of this process, you will
+perform a self-assessment to determine whether your API specification is conformant.
+
+### The importance of transparency
+
+Transparency is a key aspect of this process. By making the results of your declaration of conformity publicly
+available, we ensure an environment of openness and accountability. Suppliers are encouraged to submit accurate results,
+knowing that their declarations will be published in the [API Library for Dutch Healthcare](
+https://www.zorgapis.nl/){: target="_blank" }. Results will be visible to everyone and can be independently verified
+based on the provided evidence.
+
 !!! warning
 
-    When you claim compliance with standards, specifications, guidelines, practices, policies, or laws, you MUST provide
-    evidence supporting these claims. Evidence may include URLs to official third-party validation reports or audits.
+    You must [provide evicende](#providing-evidence) supporting compliance claims. Detailed documentation helps maintain
+    the integrity and credibility of your declaration.
 
-    See [SD010](https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd010-when-documentation-claims-compliance-to-standards-specifications-guidelines-and-practices-policies-or-law-documentation-must-provide-references-to-evidence-to-back-up-these-claims){: target="_blank" }.
+### Declarations are immutable
+
+It is important to note that a declaration of conformity cannot be changed after it has been submitted. Similar to a
+`git commit` command, a new and permanent snapshot of the API specification's current rankings and standardization level
+is recorded into your history.
+
+!!! info
+
+    Although you cannot alter a submitted declaration, you can always add new declarations to reflect updates or changes.
+    The most recently submitted declaration will be used to display your ranking levels in the
+    [API Library for Dutch Healthcare](https://www.zorgapis.nl/){: target="_blank" }.
+
+### Providing evidence
+
+To support your compliance with standards, specifications, guidelines, practices, policies, or laws, you must provide
+evidence. This may include URLs to official third-party validation reports or audits (see
+[SD010](https://nictiz.github.io/api-requirements-docs/v1.2.0/api-specification-and-documentation/#sd010-when-documentation-claims-compliance-to-standards-specifications-guidelines-and-practices-policies-or-law-documentation-must-provide-references-to-evidence-to-back-up-these-claims){: target="_blank" }).
+
+The `remarks` field is available for you to provide evidence for compliance claims or to explain why specific
+requirements may not apply to your API specification.
 
 !!! note
 
     [Markdown](https://www.markdownguide.org/basic-syntax/){: target="_blank" } is supported for the `remarks` field.
     You can use Markdown syntax to format text, include links and more to enhance the readability and organization of
     your remarks.
+
+### 
 
 === "Request"
 
