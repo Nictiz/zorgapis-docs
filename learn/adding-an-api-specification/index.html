@@ -1252,8 +1252,15 @@ meaningful and consistent, allowing for a fair comparison between APIs that shar
 will apply to the API specification and all of its versions.</p>
 </div>
 <p>When you publish a declaration of conformity, you must use the set of requirements specific to the architectural style
-you selected when adding the API specification. We provide code snippets in JSON format to assist you in creating a
-declaration. These examples can be easily copied and used with our <a href="https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203" target="_blank">Postman Collection</a>.</p>
+you selected when adding the API specification.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an expected requirement is missing, the ZorgAPIs API server will return an error. If an extra requirement is
+provided that is not part of the expected set, the API server will ignore it.</p>
+</div>
+<p>We provide code snippets in JSON format to assist you in creating a declaration. These examples can be easily copied and
+used with our
+<a href="https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203" target="_blank">Postman Collection</a>.</p>
 <details class="example">
 <summary>Expand to show snippets</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="architectural-styles-rest" name="__tabbed_3" type="radio" /><input id="architectural-styles-soap" name="__tabbed_3" type="radio" /><input id="architectural-styles-graphql" name="__tabbed_3" type="radio" /><input id="architectural-styles-odata" name="__tabbed_3" type="radio" /><input id="architectural-styles-grpc" name="__tabbed_3" type="radio" /><input id="architectural-styles-other" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="architectural-styles-rest">REST</label><label for="architectural-styles-soap">SOAP</label><label for="architectural-styles-graphql">GraphQL</label><label for="architectural-styles-odata">OData</label><label for="architectural-styles-grpc">gRPC</label><label for="architectural-styles-other">Other</label></div>
