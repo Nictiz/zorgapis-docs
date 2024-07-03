@@ -1,0 +1,218 @@
+{
+  "requirementsVersion": "1.2.0",
+  "requirements": {
+    "SD001": {
+      "conformityType": "CONFORMANT",
+      "remarks": "Provide evidence supporting compliance claims with standards, specifications, guidelines, practices, policies, or laws. Evidence may include URLs to official third-party validation reports or audits."
+    },
+    "SD001.001": {
+      "conformityType": "NOT_CONFORMANT",
+      "remarks": "For example, explain why the resource does not meet this requirement."
+    },
+    "SD001.002": {
+      "conformityType": "NOT_APPLICABLE",
+      "remarks": "For example, explain why this requirement does not apply to the resource."
+    },
+    "SD001.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.004": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.005": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.006": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.007": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.008": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.009": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.010": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.011": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.012": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.013": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.014": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.015": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.016": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD001.017": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD002.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD002.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD002.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD003.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD003.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD004": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD004.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD004.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD004.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD004.004": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD005": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD005.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD005.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD009": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD009.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD009.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD009.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD010": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD011": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD012": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD013": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SD014": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DI001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DI001.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DI001.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DI001.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM001.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM001.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM001.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM001.004": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM002.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM002.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM002.003": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "LM008": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DR001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DR012": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "DR-S001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC006": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC007": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC008": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC009": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC-S001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "SC-S002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "IS001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "IS003.001": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "IS003.002": {
+      "conformityType": "NOT_CONFORMANT"
+    },
+    "IS003": {
+      "conformityType": "NOT_CONFORMANT"
+    }
+  }
+}

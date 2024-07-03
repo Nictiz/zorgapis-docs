@@ -147,7 +147,66 @@ requirements may not apply to your API specification.
     You can use Markdown syntax to format text, include links and more to enhance the readability and organization of
     your remarks.
 
-### 
+### Architectural styles
+
+When adding a declaration of conformity, it is crucial te recognize that certain requirements may only apply to specific
+architectural styles. Each architectural style, such as
+[REST](https://www.zorgapis.nl/en/api-requirements?perspectiveTypes=API_SPECIFICATION&architecturalStyles=REST){: target="_blank" },
+SOAP, GraphQL, OData, or gRPC, has its own unique set of requirements. This approach ensures that rankings are
+meaningful and consistent, allowing for a fair comparison between APIs that share the same architectural principles. 
+
+!!! info
+
+    You set the architectural style when [adding an API specification](#add-api-specification). This architectural style
+    will apply to the API specification and all of its versions.
+
+When you publish a declaration of conformity, you must use the set of requirements specific to the architectural style
+you selected when adding the API specification. We provide code snippets in JSON format to assist you in creating a
+declaration. These examples can be easily copied and used with our [Postman Collection](
+https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+
+??? example "Expand to show snippets"
+
+    === "REST"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_rest.json"
+        ```
+
+        1.  The name of the API requirements version, for example `#!js "1.2.0"`, against which to validate this version
+            of the API specification.
+
+    === "SOAP"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_soap.json"
+        ```
+
+    === "GraphQL"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        ```
+
+    === "OData"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        ```
+
+    === "gRPC"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        ```
+
+    === "Other"
+
+        ```json
+        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        ```
+
+### Example
 
 === "Request"
 
@@ -162,8 +221,7 @@ requirements may not apply to your API specification.
         the API specification.
     2.  Conformity evaluation has passed, the resource is conformant.
     3.  Conformity evaluation has not passed, the resource is not conformant.
-    4.  Conformity has not been evaluated.
-    5.  Conformity evaluation is not applicable to the resource.
+    4.  Conformity evaluation is not applicable to the resource.
 
 === "Response"
 
