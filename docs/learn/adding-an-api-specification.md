@@ -161,9 +161,16 @@ meaningful and consistent, allowing for a fair comparison between APIs that shar
     will apply to the API specification and all of its versions.
 
 When you publish a declaration of conformity, you must use the set of requirements specific to the architectural style
-you selected when adding the API specification. We provide code snippets in JSON format to assist you in creating a
-declaration. These examples can be easily copied and used with our [Postman Collection](
-https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+you selected when adding the API specification.
+
+!!! note
+
+    If an expected requirement is missing, the ZorgAPIs API server will return an error. If an extra requirement is
+    provided that is not part of the expected set, the API server will ignore it.
+
+We provide code snippets in JSON format to assist you in creating a declaration. These examples can be easily copied and
+used with our
+[Postman Collection](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
 
 ??? example "Expand to show snippets"
 
