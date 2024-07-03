@@ -10,11 +10,7 @@
       "remarks": "For example, explain why the resource does not meet this requirement."
     },
     "SD001.002": {
-      "conformityType": "NOT_EVALUATED", // (4)!
-      "remarks": "For example, provide reasons why the conformity of this requirement has not been evaluated."
-    },
-    "SD001.003": {
-      "conformityType": "NOT_APPLICABLE", // (5)!
+      "conformityType": "NOT_APPLICABLE", // (4)!
       "remarks": "For example, explain why this requirement does not apply to the resource."
     },
     ...
