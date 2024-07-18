@@ -1,14 +1,15 @@
 ﻿{
-  "name": "Stichting MedMij", // (1)!
-  "description": "MedMij is the standard in the Netherlands for the secure exchange of health data between care users and care providers.",
-  "website": "https://medmij.nl/",
-  "emailAddress": "info@medmij.nl",
-  "phoneNumber": "+31 (0)85 303 4959",
+  "name": "Nictiz", // (1)!
+  "description": "Nictiz is the Dutch competence center for electronic exchange of health and care information.",
+  "website": "https://nictiz.nl/",
+  "githubUrl": "https://github.com/Nictiz", // (2)!
+  "emailAddress": "info@nictiz.nl",
+  "phoneNumber": "+31 (0)70 317 3450",
   "address": {
-    "street": "Maanweg",
-    "houseNumber": 174,
-    "addressLine2": "Building C/3rd floor",
-    "postalCode": "2516 AB",
+    "street": "Oude Middenweg",
+    "houseNumber": 55, // (3)!
+    "addressLine2": "Office building Palazzo Giardino",
+    "postalCode": "2491 AC",
     "city": "The Hague",
     "stateOrRegion": "South Holland",
     "country": "NL"
