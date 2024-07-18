@@ -53,6 +53,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - blog
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
@@ -141,4 +142,6 @@ nav:
   - Play:
     - play/index.md
   - Code: code/index.md
+  - Blog:
+      - blog/index.md
   - API Library: https://www.zorgapis.nl/
