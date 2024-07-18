@@ -2,6 +2,15 @@
 
 ## Add organization
 
+This section guides you through the process of adding your organization to the [API Library for Dutch Healthcare](
+https://www.zorgapis.nl/){: target="_blank" } via our API.
+
+!!! info
+
+    You can set the URL of your organization on GitHub or GitLab using the `githubUrl` and `gitlabUrl` properties. This
+    URL will be used to retrieve the organization's avatar and display it on the organization page in the API Library
+    for Dutch Healthcare.
+
 === "Request"
 
     ```json
@@ -12,6 +21,8 @@
     ```
 
     1.  The name of the organization, must be **unique**.
+    2.  The URL of the organization on GitHub. For GitLab, use the `gitlabUrl` property.
+    3.  To set the house number addition (for example, 'A'), use the `houseNumberAddition` property.
 
 === "Response"
 

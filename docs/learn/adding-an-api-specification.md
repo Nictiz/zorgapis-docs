@@ -128,8 +128,8 @@ is recorded into your history.
 
 !!! info
 
-    Although you cannot alter a submitted declaration, you can always add new declarations to reflect updates or changes.
-    The most recently submitted declaration will be used to display your ranking levels in the
+    Although you cannot alter a submitted declaration, you can always add new declarations to reflect updates or
+    changes. The most recently submitted declaration will be used to display your ranking levels in the
     [API Library for Dutch Healthcare](https://www.zorgapis.nl/){: target="_blank" }.
 
 ### Providing evidence
