@@ -1,0 +1,11 @@
+{
+  "id": "05d8de10-1932-4e7f-badf-655c1a82fcc3", // (1)!
+  "name": "FHIR",
+  "description": "FHIR (Fast Health Interoperability Resources) is an HL7 specification for Healthcare Interoperability.",
+  "organizationId": "a70590c6-06ce-4dba-9098-ed996335bdec",
+  "organization": {
+    "id": "a70590c6-06ce-4dba-9098-ed996335bdec",
+    "name": "HL7 Nederland"
+  },
+  "url": "https://hl7.org/fhir/"
+}
