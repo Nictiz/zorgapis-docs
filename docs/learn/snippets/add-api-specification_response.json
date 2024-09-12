@@ -1,6 +1,5 @@
 ﻿{
   "id": "fe30bf05-de07-4556-9b17-1f82d62fe45f", // (1)!
-  "isArchived": false,
   "name": "Verzamelen Huisartsgegevens",
   "description": "Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.",
   "organizationId": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",

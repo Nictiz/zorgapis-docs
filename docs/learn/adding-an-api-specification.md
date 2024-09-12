@@ -19,7 +19,7 @@ erDiagram
 
 === "Request"
 
-    ```json hl_lines="8"
+    ```json hl_lines="7"
     POST https://api.zorgapis.nl/v1beta1/api-specifications HTTP/1.1
     Content-Type: application/json
 
@@ -34,7 +34,7 @@ erDiagram
 
 === "Response"
 
-    ```json hl_lines="5 10-13"
+    ```json hl_lines="5 9-12"
     HTTP/1.1 201 Created
     Content-Type: application/json
 
@@ -260,7 +260,7 @@ used with our
 
 === "Response"
 
-    ```json hl_lines="16-58"
+    ```json hl_lines="15-57"
     HTTP/1.1 20O OK
     Content-Type: application/json
 
