@@ -27,8 +27,8 @@ erDiagram
     ```
 
     1.  The name of the API specification, must be **unique** for this organization (see `#!js "organizationId"`).
-    2.  The UUID of the [organization](./adding-an-organization.md#add-organization) that maintains the API
-        specification.
+    2.  The UUID of the [organization](../organizations/adding-an-organization.md#add-organization) that maintains the
+        API specification.
     3.  The architectural style of the API specification, and therefore of all associated versions. For example,
         `#!js "REST"` or `#!js "SOAP"`.
 
@@ -67,8 +67,8 @@ erDiagram
     1.  The name of the API specification version, must be **unique** for this API specification.
     2.  The date and time (formatted as per [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){: target="_blank" }) at
         which the API specification version was published. In other words, the date and time at which this version was
-        first made available by the [organization](./adding-an-organization.md#add-organization) that maintains the API
-        specification.
+        first made available by the [organization](../organizations/adding-an-organization.md#add-organization) that
+        maintains the API specification.
 
         **Note**: `publishTime` is **not** to be used for the date and time at which this version is published in the
         API Library for Dutch Healthcare. This value is set automatically by the API server upon creation of the item

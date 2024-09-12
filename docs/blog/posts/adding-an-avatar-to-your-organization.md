@@ -26,5 +26,5 @@ and display the avatar from these profiles, enhancing your organization's brand 
 https://www.zorgapis.nl/){: target="_blank" } and making it easier for users to identify and engage with your APIs.
 
 We encourage you to update your organization's profile and take advantage of this new functionality. We have updated
-our [documentation](../../learn/adding-an-organization.md) to guide you through the process of adding or updating your
-organization details.
+our [documentation](../../learn/organizations/adding-an-organization.md) to guide you through the process of adding or
+updating your organization details.

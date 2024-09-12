@@ -13,12 +13,8 @@ and API specifications, or publishing declarations of conformity.
 
 <div class="grid cards" markdown>
 
-- :material-shield-lock: **[Authorization](./authorizing-a-request.md)** – Authorize a request
-- :material-clipboard-check: **[API requirements](./getting-api-requirements.md)** – Get API requirements
-- :material-office-building: **[Organizations](./adding-an-organization.md)** – Add organizations
-- :material-api: **[API specifications](./adding-an-api-specification.md)** – Add API specifications and versions
-- :material-account-plus: **[Invitations](./inviting-a-user-to-an-organization.md)** – Invite users to an organization
-- :material-account-check: **[Accept invitations](./accepting-an-invitation-to-join-an-organization.md)** – Accept
-  pending invitations for an organization
+- :material-shield-lock: **[Authorization](./authorizing-a-request.md)** – Register an account
+- :material-office-building: **[Organizations](./organizations/adding-an-organization.md)** – Add your organization
+- :material-api: **[API specifications](./apis/adding-an-api-specification.md)** – Add your API specification
 
 </div>

@@ -134,11 +134,17 @@ nav:
   - Learn:
       - learn/index.md
       - Authorizing a request: learn/authorizing-a-request.md
-      - Getting API requirements: learn/getting-api-requirements.md
-      - Adding an organization: learn/adding-an-organization.md
-      - Adding an API specification: learn/adding-an-api-specification.md
-      - Inviting a user to an organization: learn/inviting-a-user-to-an-organization.md
-      - Accepting an invitation to join an organization: learn/accepting-an-invitation-to-join-an-organization.md
+      - Organizations:
+        - learn/organizations/index.md
+        - Adding an organization: learn/organizations/adding-an-organization.md
+        - Inviting a user to an organization: learn/organizations/inviting-a-user-to-an-organization.md
+        - Accepting an invitation to join an organization: learn/organizations/accepting-an-invitation-to-join-an-organization.md
+      - APIs:
+        - learn/apis/index.md
+        - Getting API requirements: learn/apis/getting-api-requirements.md
+        - Adding an API specification: learn/apis/adding-an-api-specification.md
+      #- Standards:
+      #- Agreements:
   - Play:
     - play/index.md
   - Code: code/index.md
