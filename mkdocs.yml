@@ -146,7 +146,9 @@ nav:
       - Standards:
         - learn/standards/index.md
         - Adding a communication standard: learn/standards/adding-a-communication-standard.md
-      #- Agreements:
+      - Agreements:
+        - learn/agreements/index.md
+        - Adding a trust framework: learn/agreements/adding-a-trust-framework.md
   - Play:
     - play/index.md
   - Code: code/index.md
