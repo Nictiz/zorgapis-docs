@@ -23,7 +23,7 @@ erDiagram
     POST https://api.zorgapis.nl/v1beta1/api-specifications HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-api-specification_request.json"
+    --8<-- "learn/apis/snippets/add-api-specification_request.json"
     ```
 
     1.  The name of the API specification, must be **unique** for this organization (see `#!js "organizationId"`).
@@ -38,7 +38,7 @@ erDiagram
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-api-specification_response.json"
+    --8<-- "learn/apis/snippets/add-api-specification_response.json"
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
@@ -61,7 +61,7 @@ erDiagram
     POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-api-specification-version_request.json"
+    --8<-- "learn/apis/snippets/add-api-specification-version_request.json"
     ```
 
     1.  The name of the API specification version, must be **unique** for this API specification.
@@ -83,7 +83,7 @@ erDiagram
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-api-specification-version_response.json"
+    --8<-- "learn/apis/snippets/add-api-specification-version_response.json"
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
@@ -177,7 +177,7 @@ used with our
     === "REST"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_rest.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_rest.json"
         ```
 
         1.  The name of the API requirements version, for example `#!js "1.2.0"`, against which to validate this version
@@ -186,31 +186,31 @@ used with our
     === "SOAP"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_soap.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_soap.json"
         ```
 
     === "GraphQL"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_other.json"
         ```
 
     === "OData"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_other.json"
         ```
 
     === "gRPC"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_other.json"
         ```
 
     === "Other"
 
         ```json
-        --8<-- "learn/snippets/declaration-of-conformity_1_2_0_other.json"
+        --8<-- "learn/apis/snippets/declaration-of-conformity_1_2_0_other.json"
         ```
 
 ### Example
@@ -221,7 +221,7 @@ used with our
     POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-declaration-of-conformity_request.json"
+    --8<-- "learn/apis/snippets/add-declaration-of-conformity_request.json"
     ```
 
     1.  The name of the API requirements version, for example `#!js "1.2.0"`, against which to validate this version of
@@ -236,7 +236,7 @@ used with our
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-declaration-of-conformity_response.json"
+    --8<-- "learn/apis/snippets/add-declaration-of-conformity_response.json"
     ```
 
 !!! note
@@ -255,7 +255,7 @@ used with our
     PATCH https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/set-api-specification-main-version_request.json"
+    --8<-- "learn/apis/snippets/set-api-specification-main-version_request.json"
     ```
 
 === "Response"
@@ -264,7 +264,7 @@ used with our
     HTTP/1.1 20O OK
     Content-Type: application/json
 
-    --8<-- "learn/snippets/set-api-specification-main-version_response.json"
+    --8<-- "learn/apis/snippets/set-api-specification-main-version_response.json"
     ```
 
 !!! note

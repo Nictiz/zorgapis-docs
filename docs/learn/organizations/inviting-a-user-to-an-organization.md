@@ -25,7 +25,7 @@ erDiagram
     POST https://api.zorgapis.nl/v1beta1/organizations/4a7c2c17-6514-46f8-aa05-6a22fb18b4ad/invitations HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-invitation_request.json"
+    --8<-- "learn/organizations/snippets/add-invitation_request.json"
     ```
 
     1.  The email address of the user. Each organization can have only one pending invitation per email address, and the 
@@ -37,7 +37,7 @@ erDiagram
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-invitation_response.json"
+    --8<-- "learn/organizations/snippets/add-invitation_response.json"
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](

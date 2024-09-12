@@ -31,7 +31,7 @@ erDiagram
     HTTP/1.1 200 Success
     Content-Type: application/json
 
-    --8<-- "learn/snippets/get-pending-invitations_response.json"
+    --8<-- "learn/organizations/snippets/get-pending-invitations_response.json"
     ```
 
 !!! note
@@ -56,7 +56,7 @@ erDiagram
     HTTP/1.1 200 Success
     Content-Type: application/json
 
-    --8<-- "learn/snippets/accept-pending-invitation_response.json"
+    --8<-- "learn/organizations/snippets/accept-pending-invitation_response.json"
     ```
 
     1.  The date and time (formatted as per [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){: target="_blank" }) at

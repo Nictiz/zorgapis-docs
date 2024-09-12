@@ -17,7 +17,7 @@ https://www.zorgapis.nl/){: target="_blank" } via our API.
     POST https://api.zorgapis.nl/v1beta1/organizations HTTP/1.1
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-organization_request.json"
+    --8<-- "learn/organizations/snippets/add-organization_request.json"
     ```
 
     1.  The name of the organization, must be **unique**.
@@ -30,7 +30,7 @@ https://www.zorgapis.nl/){: target="_blank" } via our API.
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/add-organization_response.json"
+    --8<-- "learn/organizations/snippets/add-organization_response.json"
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](

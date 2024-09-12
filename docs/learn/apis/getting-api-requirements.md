@@ -36,7 +36,7 @@ List all must-have requirements for API specifications with the REST architectur
     HTTP/1.1 201 Created
     Content-Type: application/json
 
-    --8<-- "learn/snippets/get-api-requirements_response.json"
+    --8<-- "learn/apis/snippets/get-api-requirements_response.json"
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
