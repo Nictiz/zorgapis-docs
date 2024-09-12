@@ -1,0 +1,18 @@
+{
+  "id": "8ae84d7f-73e7-4f08-b839-c73c97128ada", // (1)!
+  "name": "R5",
+  "description": "FHIR Specification 5.0.0",
+  "communicationStandardId": "05d8de10-1932-4e7f-badf-655c1a82fcc3",
+  "communicationStandard": {
+    "id": "05d8de10-1932-4e7f-badf-655c1a82fcc3",
+    "name": "FHIR"
+  },
+  "publishTime": "2023-03-26T12:00:00.0000000Z",
+  "semVer": {
+    "major": 5,
+    "minor": 0,
+    "patch": 0
+  },
+  "lifecycleState": "PUBLISHED",
+  "url": "https://hl7.org/fhir/R5"
+}
