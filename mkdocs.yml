@@ -143,7 +143,9 @@ nav:
         - learn/apis/index.md
         - Getting API requirements: learn/apis/getting-api-requirements.md
         - Adding an API specification: learn/apis/adding-an-api-specification.md
-      #- Standards:
+      - Standards:
+        - learn/standards/index.md
+        - Adding a communication standard: learn/standards/adding-a-communication-standard.md
       #- Agreements:
   - Play:
     - play/index.md
