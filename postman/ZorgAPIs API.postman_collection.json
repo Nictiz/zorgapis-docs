@@ -4,7 +4,7 @@
 		"name": "ZorgAPIs API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32862395",
-		"_collection_link": "https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203?action=share&source=collection_link&creator=32862395"
+		"_collection_link": "https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api?action=share&source=collection_link&creator=32862395"
 	},
 	"item": [
 		{
@@ -37,7 +37,8 @@
 											"    }\r",
 											"});"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -46,7 +47,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Stichting MedMij\",\r\n  \"description\": \"MedMij is the standard in the Netherlands for the secure exchange of health data between care users and care providers.\",\r\n  \"website\": \"https://medmij.nl/\",\r\n  \"emailAddress\": \"info@medmij.nl\",\r\n  \"phoneNumber\": \"+31 (0)85 303 4959\",\r\n  \"address\": {\r\n    \"street\": \"Maanweg\",\r\n    \"houseNumber\": 174,\r\n    \"addressLine2\": \"Building C/3rd floor\",\r\n    \"postalCode\": \"2516 AB\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"name\": \"Nictiz\", \r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"githubUrl\": \"https://github.com/Nictiz\", \r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55, \r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -95,7 +96,8 @@
 											"    }\r",
 											"});"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -104,7 +106,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"isArchived\": false,\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
+									"raw": "{\r\n  \"name\": \"Verzamelen Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"architecturalStyle\": \"REST\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1338,7 +1340,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"githubUrl\": \"https://github.com/Nictiz\",\r\n  \"gitlabUrl\": \"https://gitlab.com/nictiz\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1431,7 +1433,8 @@
 											"    }\r",
 											"});"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1440,7 +1443,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"name\": \"Nictiz\",\r\n  \"description\": \"Nictiz is the Dutch competence center for electronic exchange of health and care information.\",\r\n  \"website\": \"https://nictiz.nl/\",\r\n  \"githubUrl\": \"https://github.com/Nictiz\",\r\n  \"gitlabUrl\": \"https://gitlab.com/nictiz\",\r\n  \"emailAddress\": \"info@nictiz.nl\",\r\n  \"phoneNumber\": \"+31 (0)70 317 3450\",\r\n  \"address\": {\r\n    \"street\": \"Oude Middenweg\",\r\n    \"houseNumber\": 55,\r\n    \"houseNumberAddition\": \"A\",\r\n    \"addressLine2\": \"Office building Palazzo Giardino\",\r\n    \"postalCode\": \"2491 AC\",\r\n    \"city\": \"The Hague\",\r\n    \"stateOrRegion\": \"South Holland\",\r\n    \"country\": \"NL\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2478,6 +2481,174 @@
 													]
 												},
 												{
+													"name": "communication-standard-versions",
+													"item": [
+														{
+															"name": "{communicationStandardVersionId}",
+															"item": [
+																{
+																	"name": "Set a communication standard version for an API specification version",
+																	"request": {
+																		"method": "PUT",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/communication-standard-versions/:communicationStandardVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"communication-standard-versions",
+																				":communicationStandardVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "communicationStandardVersionId",
+																					"value": "{{communicationStandardVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																},
+																{
+																	"name": "Delete a communication standard version from an API specification version",
+																	"request": {
+																		"method": "DELETE",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/communication-standard-versions/:communicationStandardVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"communication-standard-versions",
+																				":communicationStandardVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "communicationStandardVersionId",
+																					"value": "{{communicationStandardVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "trust-framework-versions",
+													"item": [
+														{
+															"name": "{trustFrameworkVersionId}",
+															"item": [
+																{
+																	"name": "Set a trust framework version for an API specification version",
+																	"request": {
+																		"method": "PUT",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/trust-framework-versions/:trustFrameworkVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"trust-framework-versions",
+																				":trustFrameworkVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "trustFrameworkVersionId",
+																					"value": "{{trustFrameworkVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																},
+																{
+																	"name": "Delete a trust framework version from an API specification version",
+																	"request": {
+																		"method": "DELETE",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/trust-framework-versions/:trustFrameworkVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"trust-framework-versions",
+																				":trustFrameworkVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "trustFrameworkVersionId",
+																					"value": "{{trustFrameworkVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																}
+															]
+														}
+													]
+												},
+												{
 													"name": "Get an API specification version by ID",
 													"request": {
 														"method": "GET",
@@ -2622,7 +2793,8 @@
 															"    }\r",
 															"});"
 														],
-														"type": "text/javascript"
+														"type": "text/javascript",
+														"packages": {}
 													}
 												}
 											],
@@ -2631,7 +2803,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    }\r\n  ]\r\n}",
+													"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    }\r\n  ],\r\n  \"communicationStandardVersions\": [\r\n    {\r\n      \"id\": \"{{communicationStandardVersionId}}\"\r\n    }\r\n  ],\r\n  \"trustFrameworkVersions\": [\r\n    {\r\n      \"id\": \"{{trustFrameworkVersionId}}\"\r\n    }\r\n  ]\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -2817,6 +2989,658 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "communication-standards",
+					"item": [
+						{
+							"name": "{communicationStandardId}",
+							"item": [
+								{
+									"name": "Get a communication standard by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/communication-standards/:communicationStandardId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"communication-standards",
+												":communicationStandardId"
+											],
+											"variable": [
+												{
+													"key": "communicationStandardId",
+													"value": "{{communicationStandardId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a communication standard",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"FHIR\",\r\n  \"description\": \"FHIR (Fast Health Interoperability Resources) is an HL7 specification for Healthcare Interoperability.\",\r\n  \"mainVersionId\": \"{{communicationStandardVersionId}}\",\r\n  \"url\": \"https://hl7.org/fhir/\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/communication-standards/:communicationStandardId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"communication-standards",
+												":communicationStandardId"
+											],
+											"variable": [
+												{
+													"key": "communicationStandardId",
+													"value": "{{communicationStandardId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all communication standards",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/communication-standards?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"communication-standards"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a communication standard",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"communicationStandardId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"FHIR\",\r\n  \"description\": \"FHIR (Fast Health Interoperability Resources) is an HL7 specification for Healthcare Interoperability.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"url\": \"https://hl7.org/fhir/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/communication-standards",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"communication-standards"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "communication-standard-versions",
+					"item": [
+						{
+							"name": "{communicationStandardVersionId}",
+							"item": [
+								{
+									"name": "Get a communication standard version by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/communication-standard-versions/:communicationStandardVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"communication-standard-versions",
+												":communicationStandardVersionId"
+											],
+											"variable": [
+												{
+													"key": "communicationStandardVersionId",
+													"value": "{{communicationStandardVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a communication standard version",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"R5\",\r\n  \"description\": \"FHIR Specification 5.0.0\",\r\n  \"publishTime\": \"2023-03-26T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 5,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://hl7.org/fhir/R5/\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/communication-standard-versions/:communicationStandardVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"communication-standard-versions",
+												":communicationStandardVersionId"
+											],
+											"variable": [
+												{
+													"key": "communicationStandardVersionId",
+													"value": "{{communicationStandardVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all communication standard versions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/communication-standard-versions?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"communication-standard-versions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a communication standard version",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"communicationStandardVersionId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"R5\",\r\n  \"description\": \"FHIR Specification 5.0.0\",\r\n  \"communicationStandardId\": \"{{communicationStandardId}}\",\r\n  \"publishTime\": \"2023-03-26T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 5,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://hl7.org/fhir/R5/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/communication-standard-versions",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"communication-standard-versions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "trust-frameworks",
+					"item": [
+						{
+							"name": "{trustFrameworkId}",
+							"item": [
+								{
+									"name": "Get a trust framework by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/trust-frameworks/:trustFrameworkId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"trust-frameworks",
+												":trustFrameworkId"
+											],
+											"variable": [
+												{
+													"key": "trustFrameworkId",
+													"value": "{{trustFrameworkId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a trust framework",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"MedMij Afsprakenstelsel\",\r\n  \"description\": \"Het MedMij Afsprakenstelsel draagt eraan bij dat persoonsgebonden, gevoelige en vertrouwelijke gezondheidsgegevens op een veilige en gebruiksvriendelijke wijze uitgewisseld kunnen worden tussen persoonlijke gezondheidsomgevingen en aanbieders.\",\r\n  \"mainVersionId\": \"{{trustFrameworkVersionId}}\",\r\n  \"url\": \"https://afsprakenstelsel.medmij.nl/\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/trust-frameworks/:trustFrameworkId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"trust-frameworks",
+												":trustFrameworkId"
+											],
+											"variable": [
+												{
+													"key": "trustFrameworkId",
+													"value": "{{trustFrameworkId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all trust frameworks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/trust-frameworks?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"trust-frameworks"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a trust framework",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"trustFrameworkId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"MedMij Afsprakenstelsel\",\r\n  \"description\": \"Het MedMij Afsprakenstelsel draagt eraan bij dat persoonsgebonden, gevoelige en vertrouwelijke gezondheidsgegevens op een veilige en gebruiksvriendelijke wijze uitgewisseld kunnen worden tussen persoonlijke gezondheidsomgevingen en aanbieders.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"url\": \"https://afsprakenstelsel.medmij.nl/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/trust-frameworks",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"trust-frameworks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "trust-framework-versions",
+					"item": [
+						{
+							"name": "{trustFrameworkVersionId}",
+							"item": [
+								{
+									"name": "Get a trust framework version by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/trust-framework-versions/:trustFrameworkVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"trust-framework-versions",
+												":trustFrameworkVersionId"
+											],
+											"variable": [
+												{
+													"key": "trustFrameworkVersionId",
+													"value": "{{trustFrameworkVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a trust framework version",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"2.2.2 Verplicht\",\r\n  \"description\": \"Dit is de huidige verplichte versie die door alle deelnemers moet worden ondersteund.\",\r\n  \"publishTime\": \"2024-09-10T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 2,\r\n    \"patch\": 2\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://afsprakenstelsel.medmij.nl/asverplicht/mmverplicht/\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/trust-framework-versions/:trustFrameworkVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"trust-framework-versions",
+												":trustFrameworkVersionId"
+											],
+											"variable": [
+												{
+													"key": "trustFrameworkVersionId",
+													"value": "{{trustFrameworkVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all trust framework versions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/trust-framework-versions?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"trust-framework-versions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a trust framework version",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"trustFrameworkVersionId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"2.2.2 Verplicht\",\r\n  \"description\": \"Dit is de huidige verplichte versie die door alle deelnemers moet worden ondersteund.\",\r\n  \"trustFrameworkId\": \"{{trustFrameworkId}}\",\r\n  \"publishTime\": \"2024-09-10T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 2,\r\n    \"patch\": 2\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://afsprakenstelsel.medmij.nl/asverplicht/mmverplicht/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/trust-framework-versions",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"trust-framework-versions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
@@ -2826,7 +3650,7 @@
 		"oauth2": [
 			{
 				"key": "scope",
-				"value": "openid offline_access users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write",
+				"value": "openid offline_access users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write communication-standards:read communication-standards:write trust-frameworks:read trust-frameworks:write",
 				"type": "string"
 			},
 			{
@@ -2943,6 +3767,22 @@
 		},
 		{
 			"key": "apiSpecificationVersionDeclarationOfConformityId",
+			"value": ""
+		},
+		{
+			"key": "communicationStandardId",
+			"value": ""
+		},
+		{
+			"key": "communicationStandardVersionId",
+			"value": ""
+		},
+		{
+			"key": "trustFrameworkId",
+			"value": ""
+		},
+		{
+			"key": "trustFrameworkVersionId",
 			"value": ""
 		}
 	]
