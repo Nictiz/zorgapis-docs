@@ -1,0 +1,13 @@
+{
+  "name": "2.2.2 Verplicht", // (1)!
+  "description": "Dit is de huidige verplichte versie die door alle deelnemers moet worden ondersteund.",
+  "trustFrameworkId": "3d443c34-24a4-4640-bfe5-822627af76e2", // (2)!
+  "publishTime": "2024-09-10T12:00:00.0000000Z", // (3)!
+  "semVer": { // (4)!
+    "major": 2,
+    "minor": 2,
+    "patch": 2
+  },
+  "lifecycleState": "PUBLISHED",
+  "url": "https://afsprakenstelsel.medmij.nl/asverplicht/mmverplicht/"
+}
