@@ -1,0 +1,6 @@
+{
+  "name": "MedMij Afsprakenstelsel", // (1)!
+  "description": "Het MedMij Afsprakenstelsel draagt eraan bij dat persoonsgebonden, gevoelige en vertrouwelijke gezondheidsgegevens op een veilige en gebruiksvriendelijke wijze uitgewisseld kunnen worden tussen persoonlijke gezondheidsomgevingen en aanbieders.",
+  "organizationId": "606becf9-bfd6-4ed1-aadc-7e478af8e456", // (2)!
+  "url": "https://afsprakenstelsel.medmij.nl/"
+}

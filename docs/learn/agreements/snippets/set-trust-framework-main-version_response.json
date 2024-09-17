@@ -1,0 +1,25 @@
+﻿{
+  "id": "3d443c34-24a4-4640-bfe5-822627af76e2",
+  "name": "MedMij Afsprakenstelsel",
+  "description": "Het MedMij Afsprakenstelsel draagt eraan bij dat persoonsgebonden, gevoelige en vertrouwelijke gezondheidsgegevens op een veilige en gebruiksvriendelijke wijze uitgewisseld kunnen worden tussen persoonlijke gezondheidsomgevingen en aanbieders.",
+  "organizationId": "606becf9-bfd6-4ed1-aadc-7e478af8e456",
+  "organization": {
+    "id": "606becf9-bfd6-4ed1-aadc-7e478af8e456",
+    "name": "Stichting MedMij"
+  },
+  "url": "https://afsprakenstelsel.medmij.nl/",
+  "mainVersionId": "2389dc34-2626-4ba3-b4f9-8ad649137d55",
+  "mainVersion": {
+    "id": "2389dc34-2626-4ba3-b4f9-8ad649137d55",
+    "name": "2.2.2 Verplicht",
+    "description": "Dit is de huidige verplichte versie die door alle deelnemers moet worden ondersteund.",
+    "publishTime": "2024-09-10T12:00:00.0000000Z",
+    "semVer": {
+      "major": 2,
+      "minor": 2,
+      "patch": 2
+    },
+    "lifecycleState": "PUBLISHED",
+    "url": "https://afsprakenstelsel.medmij.nl/asverplicht/mmverplicht/"
+  }
+}
