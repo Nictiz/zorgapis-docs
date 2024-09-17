@@ -6,7 +6,7 @@ innovate without disrupting live data or environments.
 !!! info
 
     When exploring our sandbox API, fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and select **Get New Access Token** in the **Authorization** tab of a request. Postman will automatically populate
     the relevant parts of the request. To learn more, go to [Authenticate with OAuth 2.0 authentication in Postman](
     https://learning.postman.com/docs/sending-requests/authorization/oauth-20){: target="_blank" }.
@@ -16,7 +16,7 @@ innovate without disrupting live data or environments.
 
 !!! note
 
-    When you fork our [Postman Collection](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" },
+    When you fork our [Postman Collection](https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" },
     use the [environment selector](https://learning.postman.com/docs/getting-started/basics/navigating-postman/#environment-selector-and-environment-quick-look){: target="_blank" }
     to set **Sandbox** as the active environment.
 
@@ -27,7 +27,7 @@ Here you will find all the tools and assets you need to get started with the Zor
 <div class="grid cards" markdown>
 
 - :simple-openapiinitiative: **[API reference](https://nictiz.github.io/zorgapis-openapi-specification/){: target="_blank" }** – Definition of the ZorgAPIs API
-- :simple-postman: **[Postman Collection](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }** – Fork our Postman Collection
+- :simple-postman: **[Postman Collection](https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }** – Fork our Postman Collection
 - :material-flask: **[Sandbox UI](https://sandbox.zorgapis.nl/){: target="_blank" }** – User interface for exploring sandbox data
 
 </div>

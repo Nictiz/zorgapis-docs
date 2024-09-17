@@ -42,5 +42,5 @@ https://www.zorgapis.nl/){: target="_blank" } via our API.
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/organizations/operation/addOrganization){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.

@@ -27,7 +27,7 @@ particular level of standardization.
 
     Fork our Postman Collection.
 
-    [:octicons-arrow-right-24: Postman](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    [:octicons-arrow-right-24: Postman](https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
 
 </div>
 

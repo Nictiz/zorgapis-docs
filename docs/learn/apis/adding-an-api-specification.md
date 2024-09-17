@@ -50,7 +50,7 @@ erDiagram
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/api-specifications/operation/addApiSpecification){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
 ## Add API specification version
@@ -98,7 +98,7 @@ erDiagram
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/api-specifications.versions/operation/addApiSpecificationVersion){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
 ## Add declaration of conformity
@@ -170,7 +170,7 @@ you selected when adding the API specification.
 
 We provide code snippets in JSON format to assist you in creating a declaration. These examples can be easily copied and
 used with our
-[Postman Collection](https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }.
+[Postman Collection](https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }.
 
 ??? example "Expand to show snippets"
 
@@ -244,7 +244,7 @@ used with our
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/api-specifications.versions.declarations-of-conformity/operation/addApiSpecificationVersionDeclarationOfConformity){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
 ## Set API specification main version
@@ -272,5 +272,5 @@ used with our
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/api-specifications/operation/updateApiSpecification){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
