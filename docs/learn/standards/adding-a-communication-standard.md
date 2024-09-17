@@ -96,3 +96,29 @@ erDiagram
     and explore our API.
 
 ## Set communication standard main version
+
+=== "Request"
+
+    ```json hl_lines="5"
+    PATCH https://api.zorgapis.nl/v1beta1/communication-standards/05d8de10-1932-4e7f-badf-655c1a82fcc3 HTTP/1.1
+    Content-Type: application/json
+
+    --8<-- "learn/standards/snippets/set-communication-standard-main-version_request.json"
+    ```
+
+=== "Response"
+
+    ```json hl_lines="15-27"
+    HTTP/1.1 20O OK
+    Content-Type: application/json
+
+    --8<-- "learn/standards/snippets/set-communication-standard-main-version_response.json"
+    ```
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/communication-standards/operation/updateCommunicationStandard){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    and explore our API.
