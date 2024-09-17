@@ -38,7 +38,7 @@ erDiagram
     ```
 
     1.  The Universally Unique Identifier, or UUID (see [RFC 4122](
-        https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the commmunication standard by
+        https://datatracker.ietf.org/doc/html/rfc4122){: target="_blank" }), assigned to the communication standard by
         the API server.
 
 !!! note
