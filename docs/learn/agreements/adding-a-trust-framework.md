@@ -46,7 +46,7 @@ erDiagram
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/trust-frameworks/operation/addTrustFramework){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
 ## Add trust framework version
@@ -92,7 +92,7 @@ erDiagram
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/trust-framework-versions/operation/addTrustFrameworkVersion){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
 ## Set trust framework main version
@@ -120,5 +120,5 @@ erDiagram
     To learn more, view the [API reference](
     https://oas.zorgapis.nl/#tag/trust-frameworks/operation/updateTrustFramework){: target="_blank" }
     or fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.

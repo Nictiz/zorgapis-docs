@@ -6,7 +6,7 @@ access token for the API, then use that token to authenticate future requests.
 !!! info
 
     When exploring our API, fork our [Postman Collection](
-    https://www.postman.com/zorgapis/workspace/zorgapis/collection/32862395-c22bf5f5-a2ec-40df-86a2-7817de5c7203){: target="_blank" }
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and select **Get New Access Token** in the **Authorization** tab of a request. Postman will automatically populate
     the relevant parts of the request. To learn more, go to [Authenticate with OAuth 2.0 authentication in Postman](
     https://learning.postman.com/docs/sending-requests/authorization/oauth-20){: target="_blank" }.
