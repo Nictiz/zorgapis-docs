@@ -949,6 +949,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-communication-standard-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get communication standard versions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1443,6 +1452,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-communication-standard-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get communication standard versions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1536,6 +1554,50 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To learn more, view the <a href="https://oas.zorgapis.nl/#tag/communication-standards/operation/listCommunicationStandards" target="_blank">API reference</a>
+or fork our <a href="https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api" target="_blank">Postman Collection</a>
+and explore our API.</p>
+</div>
+<h2 id="get-communication-standard-versions">Get communication standard versions<a class="headerlink" href="#get-communication-standard-versions" title="Permanent link">&para;</a></h2>
+<p>List all versions for the communication standard with id <code class="language-js highlight"><span class="s2">&quot;05d8de10-1932-4e7f-badf-655c1a82fcc3&quot;</span></code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="get-communication-standard-versions-request" name="__tabbed_2" type="radio" /><input id="get-communication-standard-versions-response" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="get-communication-standard-versions-request">Request</label><label for="get-communication-standard-versions-response">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">GET</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//api.zorgapis.nl/v1beta1/communication-standard-versions</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="err">?</span><span class="kc">f</span><span class="err">il</span><span class="kc">ter</span><span class="err">=eq(commu</span><span class="kc">n</span><span class="err">ica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">S</span><span class="kc">tan</span><span class="err">dardId</span><span class="p">,</span><span class="s2">&quot;05d8de10-1932-4e7f-badf-655c1a82fcc3&quot;</span><span class="err">)</span><span class="w"> </span><span class="err">HTTP/</span><span class="mf">1.1</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">[</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="hll"><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8ae84d7f-73e7-4f08-b839-c73c97128ada&quot;</span><span class="p">,</span>
+</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;R5&quot;</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FHIR Specification 5.0.0&quot;</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">&quot;communicationStandardId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;05d8de10-1932-4e7f-badf-655c1a82fcc3&quot;</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">&quot;communicationStandard&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;05d8de10-1932-4e7f-badf-655c1a82fcc3&quot;</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FHIR&quot;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nt">&quot;publishTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-03-26T12:00:00.0000000Z&quot;</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nt">&quot;semVer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="nt">&quot;major&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="nt">&quot;minor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nt">&quot;patch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nt">&quot;lifecycleState&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PUBLISHED&quot;</span><span class="p">,</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://hl7.org/fhir/R5&quot;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="err">...</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To learn more, view the <a href="https://oas.zorgapis.nl/#tag/communication-standard-versions/operation/listCommunicationStandardVersions" target="_blank">API reference</a>
 or fork our <a href="https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api" target="_blank">Postman Collection</a>
 and explore our API.</p>
 </div>
