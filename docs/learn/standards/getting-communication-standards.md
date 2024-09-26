@@ -45,7 +45,7 @@ List all versions for the communication standard with id `#!js "05d8de10-1932-4e
 
 === "Response"
 
-    ```json hl_lines="6"
+    ```json hl_lines="9"
     HTTP/1.1 200 OK
     Content-Type: application/json
 
