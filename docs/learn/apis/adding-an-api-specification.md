@@ -274,3 +274,53 @@ used with our
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
+
+## Add communication standard version
+
+=== "Request"
+
+    ```json
+    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json
+    HTTP/1.1 204 No Content // (1)!
+    ```
+
+    1.  After successfully adding the communication standard version, the API server responds with a `204` response with
+        no body.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specifications.versions.communication-standard-versions/operation/setApiSpecificationVersionCommunicationStandardVersion){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
+## Add trust framework version
+
+=== "Request"
+
+    ```json
+    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json
+    HTTP/1.1 204 No Content // (1)!
+    ```
+
+    1.  After successfully adding the trust framework version, the API server responds with a `204` response with
+        no body.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specifications.versions.trust-framework-versions/operation/setApiSpecificationVersionTrustFrameworkVersion){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
