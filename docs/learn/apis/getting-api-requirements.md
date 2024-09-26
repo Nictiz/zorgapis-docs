@@ -33,7 +33,7 @@ List all must-have requirements for API specifications with the REST architectur
 === "Response"
 
     ```json hl_lines="6"
-    HTTP/1.1 201 Created
+    HTTP/1.1 200 OK
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/get-api-requirements_response.json"

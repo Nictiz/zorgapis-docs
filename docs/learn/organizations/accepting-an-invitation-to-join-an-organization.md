@@ -28,7 +28,7 @@ erDiagram
 === "Response"
 
     ```json hl_lines="6"
-    HTTP/1.1 200 Success
+    HTTP/1.1 200 OK
     Content-Type: application/json
 
     --8<-- "learn/organizations/snippets/get-pending-invitations_response.json"
@@ -53,7 +53,7 @@ erDiagram
 === "Response"
 
     ```json hl_lines="12-13"
-    HTTP/1.1 200 Success
+    HTTP/1.1 200 OK
     Content-Type: application/json
 
     --8<-- "learn/organizations/snippets/accept-pending-invitation_response.json"
