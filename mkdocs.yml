@@ -145,7 +145,6 @@ nav:
         - Adding an API specification: learn/apis/adding-an-api-specification.md
       - Standards:
         - learn/standards/index.md
-        - Getting communication standards: learn/standards/getting-communication-standards.md
         - Adding a communication standard: learn/standards/adding-a-communication-standard.md
       - Agreements:
         - learn/agreements/index.md
