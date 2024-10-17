@@ -277,6 +277,10 @@ used with our
 
 ## Add communication standard version
 
+Learn how to link a communication standard version to your API specification version. To find the appropriate version,
+visit [this section](../standards/adding-a-communication-standard.md#get-communication-standard-versions) for a guide on
+listing all available versions of a communication standard.
+
 === "Request"
 
     ```json
@@ -301,6 +305,10 @@ used with our
     and explore our API.
 
 ## Add trust framework version
+
+Learn how to link a trust framework version to your API specification version. To find the appropriate version, visit
+[this section](../agreements/adding-a-trust-framework.md#get-trust-framework-versions) for a guide on listing all
+available versions of a trust framework.
 
 === "Request"
 
