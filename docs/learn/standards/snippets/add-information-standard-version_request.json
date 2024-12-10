@@ -1,0 +1,16 @@
+{
+  "name": "2.0.41", // (1)!
+  "description": "Drie aanpassingen in het MedMij Huisartsgegevens kwalificatiemateriaal zodat het overeenkomt met het kwalificatiescript.",
+  "informationStandardId": "7bc962b1-601d-4759-9a87-68953e7b75e2", // (2)!
+  "publishTime": "2024-11-20T12:00:00.0000000Z", // (3)!
+  "semVer": { // (4)!
+    "major": 2,
+    "minor": 0,
+    "patch": 41
+  },
+  "lifecycleState": "PUBLISHED",
+  "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens",
+  "careTypes": [
+    "GENERAL_PRACTITIONERS"
+  ]
+}

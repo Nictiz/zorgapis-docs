@@ -1,6 +1,6 @@
 # Standards
 
-Learn how to add your communication standard and its versions to the [API Library for Dutch Healthcare](
+Learn how to add your communication and information standards to the [API Library for Dutch Healthcare](
 https://www.zorgapis.nl/){: target="_blank" }.
 
 ## Resources
@@ -9,5 +9,7 @@ https://www.zorgapis.nl/){: target="_blank" }.
 
 - :material-file-code: **[Communication standards](./adding-a-communication-standard.md)** – Add communication
   standards and versions
+- :material-file-code: **[Information standards](./adding-an-information-standard.md)** – Add information standards and 
+  versions
 
 </div>

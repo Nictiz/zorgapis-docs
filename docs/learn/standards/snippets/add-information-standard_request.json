@@ -1,0 +1,6 @@
+{
+  "name": "MedMij Huisartsgegevens", // (1)!
+  "description": "Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.",
+  "organizationId": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad", // (2)!
+  "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_MedMij"
+}

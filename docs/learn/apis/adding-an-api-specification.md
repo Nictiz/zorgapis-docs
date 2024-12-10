@@ -304,6 +304,35 @@ listing all available versions of a communication standard.
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
+## Add information standard version
+
+Learn how to link an information standard version to your API specification version. To find the appropriate version,
+visit [this section](../standards/adding-an-information-standard.md#get-information-standard-versions) for a guide on
+listing all available versions of an information standard.
+
+=== "Request"
+
+    ```json
+    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json
+    HTTP/1.1 204 No Content // (1)!
+    ```
+
+    1.  After successfully adding the information standard version, the API server responds with a `204` response with
+        no body.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specifications.versions.information-standard-versions/operation/setApiSpecificationVersionInformationStandardVersion){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
 ## Add trust framework version
 
 Learn how to link a trust framework version to your API specification version. To find the appropriate version, visit

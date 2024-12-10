@@ -146,6 +146,7 @@ nav:
       - Standards:
         - learn/standards/index.md
         - Adding a communication standard: learn/standards/adding-a-communication-standard.md
+        - Adding an information standard: learn/standards/adding-an-information-standard.md
       - Agreements:
         - learn/agreements/index.md
         - Adding a trust framework: learn/agreements/adding-a-trust-framework.md
