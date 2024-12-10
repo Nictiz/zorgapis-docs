@@ -1,0 +1,28 @@
+﻿{
+  "id": "7bc962b1-601d-4759-9a87-68953e7b75e2",
+  "name": "MedMij Huisartsgegevens",
+  "description": "Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.",
+  "organizationId": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+  "organization": {
+    "id": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+    "name": "Nictiz"
+  },
+  "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_MedMij",
+  "mainVersionId": "20685da1-0e1d-40b9-a0f6-5a89c444f48c",
+  "mainVersion": {
+    "id": "20685da1-0e1d-40b9-a0f6-5a89c444f48c",
+    "name": "2.0.41",
+    "description": "Drie aanpassingen in het MedMij Huisartsgegevens kwalificatiemateriaal zodat het overeenkomt met het kwalificatiescript.",
+    "publishTime": "2024-11-20T12:00:00.0000000Z",
+    "semVer": {
+      "major": 2,
+      "minor": 0,
+      "patch": 41
+    },
+    "lifecycleState": "PUBLISHED",
+    "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens",
+    "careTypes": [
+      "GENERAL_PRACTITIONERS"
+    ]
+  }
+}
