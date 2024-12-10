@@ -2565,6 +2565,90 @@
 													]
 												},
 												{
+													"name": "information-standard-versions",
+													"item": [
+														{
+															"name": "{informationStandardVersionId}",
+															"item": [
+																{
+																	"name": "Set an information standard version for an API specification version",
+																	"request": {
+																		"method": "PUT",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/information-standard-versions/:informationStandardVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"information-standard-versions",
+																				":informationStandardVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "informationStandardVersionId",
+																					"value": "{{informationStandardVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																},
+																{
+																	"name": "Delete an information standard version from an API specification version",
+																	"request": {
+																		"method": "DELETE",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseApiUrl}}/v1beta1/api-specifications/:apiSpecificationId/versions/:versionId/information-standard-versions/:informationStandardVersionId",
+																			"host": [
+																				"{{baseApiUrl}}"
+																			],
+																			"path": [
+																				"v1beta1",
+																				"api-specifications",
+																				":apiSpecificationId",
+																				"versions",
+																				":versionId",
+																				"information-standard-versions",
+																				":informationStandardVersionId"
+																			],
+																			"variable": [
+																				{
+																					"key": "apiSpecificationId",
+																					"value": "{{apiSpecificationId}}"
+																				},
+																				{
+																					"key": "versionId",
+																					"value": "{{apiSpecificationVersionId}}"
+																				},
+																				{
+																					"key": "informationStandardVersionId",
+																					"value": "{{informationStandardVersionId}}"
+																				}
+																			]
+																		}
+																	},
+																	"response": []
+																}
+															]
+														}
+													]
+												},
+												{
 													"name": "trust-framework-versions",
 													"item": [
 														{
@@ -2803,7 +2887,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    }\r\n  ],\r\n  \"communicationStandardVersions\": [\r\n    {\r\n      \"id\": \"{{communicationStandardVersionId}}\"\r\n    }\r\n  ],\r\n  \"trustFrameworkVersions\": [\r\n    {\r\n      \"id\": \"{{trustFrameworkVersionId}}\"\r\n    }\r\n  ]\r\n}",
+													"raw": "{\r\n  \"name\": \"2.0\",\r\n  \"description\": \"Verzamelen Huisartsgegevens 2.0\",\r\n  \"publishTime\": \"2020-09-02T00:00:00.000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 0\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"urls\": [\r\n    {\r\n      \"type\": \"FUNCTIONAL_DESIGN\",\r\n      \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\"\r\n    }\r\n  ],\r\n  \"communicationStandardVersions\": [\r\n    {\r\n      \"id\": \"{{communicationStandardVersionId}}\"\r\n    }\r\n  ],\r\n  \"informationStandardVersions\": [\r\n    {\r\n      \"id\": \"{{informationStandardVersionId}}\"\r\n    }\r\n  ],\r\n  \"trustFrameworkVersions\": [\r\n    {\r\n      \"id\": \"{{trustFrameworkVersionId}}\"\r\n    }\r\n  ]\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -3317,6 +3401,476 @@
 					]
 				},
 				{
+					"name": "information-standards",
+					"item": [
+						{
+							"name": "{informationStandardId}",
+							"item": [
+								{
+									"name": "Get an information standard by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/information-standards/:informationStandardId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"information-standards",
+												":informationStandardId"
+											],
+											"variable": [
+												{
+													"key": "informationStandardId",
+													"value": "{{informationStandardId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update an information standard",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"MedMij Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"mainVersionId\": \"{{informationStandardVersionId}}\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_MedMij\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/information-standards/:informationStandardId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"information-standards",
+												":informationStandardId"
+											],
+											"variable": [
+												{
+													"key": "informationStandardId",
+													"value": "{{informationStandardId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all information standards",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/information-standards?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"information-standards"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an information standard",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"informationStandardId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"MedMij Huisartsgegevens\",\r\n  \"description\": \"Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.\",\r\n  \"organizationId\": \"{{organizationId}}\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_MedMij\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/information-standards",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"information-standards"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "information-standard-versions",
+					"item": [
+						{
+							"name": "{informationStandardVersionId}",
+							"item": [
+								{
+									"name": "communication-standard-versions",
+									"item": [
+										{
+											"name": "{communicationStandardVersionId}",
+											"item": [
+												{
+													"name": "Set a communication standard version for an information standard version",
+													"request": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId/communication-standard-versions/:communicationStandardVersionId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1beta1",
+																"information-standard-versions",
+																":informationStandardVersionId",
+																"communication-standard-versions",
+																":communicationStandardVersionId"
+															],
+															"variable": [
+																{
+																	"key": "informationStandardVersionId",
+																	"value": "{{informationStandardVersionId}}"
+																},
+																{
+																	"key": "communicationStandardVersionId",
+																	"value": "{{communicationStandardVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Delete a communication standard version from an information standard version",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId/communication-standard-versions/:communicationStandardVersionId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1beta1",
+																"information-standard-versions",
+																":informationStandardVersionId",
+																"communication-standard-versions",
+																":communicationStandardVersionId"
+															],
+															"variable": [
+																{
+																	"key": "informationStandardVersionId",
+																	"value": "{{informationStandardVersionId}}"
+																},
+																{
+																	"key": "communicationStandardVersionId",
+																	"value": "{{communicationStandardVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "trust-framework-versions",
+									"item": [
+										{
+											"name": "{trustFrameworkVersionId}",
+											"item": [
+												{
+													"name": "Set a trust framework version for an information standard version",
+													"request": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId/trust-framework-versions/:trustFrameworkVersionId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1beta1",
+																"information-standard-versions",
+																":informationStandardVersionId",
+																"trust-framework-versions",
+																":trustFrameworkVersionId"
+															],
+															"variable": [
+																{
+																	"key": "informationStandardVersionId",
+																	"value": "{{informationStandardVersionId}}"
+																},
+																{
+																	"key": "trustFrameworkVersionId",
+																	"value": "{{trustFrameworkVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Delete a trust framework version from an information standard version",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId/trust-framework-versions/:trustFrameworkVersionId",
+															"host": [
+																"{{baseApiUrl}}"
+															],
+															"path": [
+																"v1beta1",
+																"information-standard-versions",
+																":informationStandardVersionId",
+																"trust-framework-versions",
+																":trustFrameworkVersionId"
+															],
+															"variable": [
+																{
+																	"key": "informationStandardVersionId",
+																	"value": "{{informationStandardVersionId}}"
+																},
+																{
+																	"key": "trustFrameworkVersionId",
+																	"value": "{{trustFrameworkVersionId}}"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Get an information standard version by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"information-standard-versions",
+												":informationStandardVersionId"
+											],
+											"variable": [
+												{
+													"key": "informationStandardVersionId",
+													"value": "{{informationStandardVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update an information standard version",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"2.0.41\",\r\n  \"description\": \"Drie aanpassingen in het MedMij Huisartsgegevens kwalificatiemateriaal zodat het overeenkomt met het kwalificatiescript.\",\r\n  \"publishTime\": \"2024-11-20T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 41\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\",\r\n  \"careTypes\": [\r\n    \"GENERAL_PRACTITIONERS\"\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions/:informationStandardVersionId",
+											"host": [
+												"{{baseApiUrl}}"
+											],
+											"path": [
+												"v1beta1",
+												"information-standard-versions",
+												":informationStandardVersionId"
+											],
+											"variable": [
+												{
+													"key": "informationStandardVersionId",
+													"value": "{{informationStandardVersionId}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "List all information standard versions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions?limit=&skip=&sort=&filter=&count=",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"information-standard-versions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": ""
+										},
+										{
+											"key": "skip",
+											"value": ""
+										},
+										{
+											"key": "sort",
+											"value": ""
+										},
+										{
+											"key": "filter",
+											"value": ""
+										},
+										{
+											"key": "count",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an information standard version",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const PROPERTY_NAME = \"id\";\r",
+											"const VARIABLE_NAME = \"informationStandardVersionId\";\r",
+											"\r",
+											"pm.test(\"Extract variable\", () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"    let jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(PROPERTY_NAME);\r",
+											"\r",
+											"    let property = jsonData[PROPERTY_NAME];\r",
+											"    // Set variable on environment if found, otherwise set on collection\r",
+											"    if (pm.environment.has(VARIABLE_NAME)) {\r",
+											"        pm.environment.set(VARIABLE_NAME, property);\r",
+											"    } else {\r",
+											"        pm.collectionVariables.set(VARIABLE_NAME, property);\r",
+											"    }\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"2.0.41\",\r\n  \"description\": \"Drie aanpassingen in het MedMij Huisartsgegevens kwalificatiemateriaal zodat het overeenkomt met het kwalificatiescript.\",\r\n  \"informationStandardId\": \"{{informationStandardId}}\",\r\n  \"publishTime\": \"2024-11-20T12:00:00.0000000Z\",\r\n  \"semVer\": {\r\n    \"major\": 2,\r\n    \"minor\": 0,\r\n    \"patch\": 41\r\n  },\r\n  \"lifecycleState\": \"PUBLISHED\",\r\n  \"url\": \"https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens\",\r\n  \"careTypes\": [\r\n    \"GENERAL_PRACTITIONERS\"\r\n  ],\r\n  \"communicationStandardVersions\": [\r\n    {\r\n      \"id\": \"{{communicationStandardVersionId}}\"\r\n    }\r\n  ],\r\n  \"trustFrameworkVersions\": [\r\n    {\r\n      \"id\": \"{{trustFrameworkVersionId}}\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/v1beta1/information-standard-versions",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"v1beta1",
+										"information-standard-versions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "trust-frameworks",
 					"item": [
 						{
@@ -3650,7 +4204,7 @@
 		"oauth2": [
 			{
 				"key": "scope",
-				"value": "openid offline_access users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write communication-standards:read communication-standards:write trust-frameworks:read trust-frameworks:write",
+				"value": "openid offline_access users:read users:write organizations:read organizations:write api-requirements-versions:read api-requirements-versions:write api-specifications:read api-specifications:write communication-standards:read communication-standards:write information-standards:read information-standards:write trust-frameworks:read trust-frameworks:write",
 				"type": "string"
 			},
 			{
@@ -3775,6 +4329,14 @@
 		},
 		{
 			"key": "communicationStandardVersionId",
+			"value": ""
+		},
+		{
+			"key": "informationStandardId",
+			"value": ""
+		},
+		{
+			"key": "informationStandardVersionId",
 			"value": ""
 		},
 		{
