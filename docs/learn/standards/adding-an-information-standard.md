@@ -18,7 +18,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/information-standards HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/information-standards HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/add-information-standard_request.json"
@@ -54,7 +54,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/information-standard-versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/information-standard-versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/add-information-standard-version_request.json"
@@ -100,7 +100,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.zorgapis.nl/v1beta1/information-standards/7bc962b1-601d-4759-9a87-68953e7b75e2 HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta2/information-standards/7bc962b1-601d-4759-9a87-68953e7b75e2 HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/set-information-standard-main-version_request.json"
@@ -132,7 +132,7 @@ listing all available versions of a communication standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
     ```
 
 === "Response"
@@ -161,7 +161,7 @@ available versions of a trust framework.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
     ```
 
 === "Response"
@@ -186,7 +186,7 @@ available versions of a trust framework.
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/information-standards HTTP/1.1
+    GET https://api.zorgapis.nl/v1beta2/information-standards HTTP/1.1
     ```
 
 === "Response"
@@ -216,7 +216,7 @@ List all versions for the information standard with id `#!js "7bc962b1-601d-4759
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/information-standard-versions
+    GET https://api.zorgapis.nl/v1beta2/information-standard-versions
         ?filter=eq(informationStandardId,"7bc962b1-601d-4759-9a87-68953e7b75e2") HTTP/1.1
     ```
 

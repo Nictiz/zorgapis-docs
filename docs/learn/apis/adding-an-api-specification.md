@@ -20,7 +20,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/api-specifications HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specifications HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-api-specification_request.json"
@@ -58,7 +58,7 @@ erDiagram
 === "Request"
 
     ```json
-    POST https://api.zorgapis.nl/v1beta1/api-specification-versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specification-versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-api-specification-version_request.json"
@@ -219,7 +219,7 @@ used with our
 === "Request"
 
     ```json
-    POST https://api.zorgapis.nl/v1beta1/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-declaration-of-conformity_request.json"
@@ -253,7 +253,7 @@ used with our
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/set-api-specification-main-version_request.json"
@@ -285,7 +285,7 @@ listing all available versions of a communication standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
     ```
 
 === "Response"
@@ -314,7 +314,7 @@ listing all available versions of an information standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c HTTP/1.1
     ```
 
 === "Response"
@@ -343,7 +343,7 @@ available versions of a trust framework.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
     ```
 
 === "Response"

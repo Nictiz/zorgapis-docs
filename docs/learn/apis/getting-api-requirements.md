@@ -18,7 +18,7 @@ List all must-have requirements for API specifications with the REST architectur
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/api-requirements-versions/1.2.0/api-requirements
+    GET https://api.zorgapis.nl/v1beta2/api-requirements-versions/1.2.0/api-requirements
         ?filter=and(
             eq(requirementLevel,"MUST"), // (1)!
             any(perspectiveTypes,eq($it,"API_SPECIFICATION")), // (2)!

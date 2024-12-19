@@ -18,7 +18,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/communication-standards HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/communication-standards HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/add-communication-standard_request.json"
@@ -54,7 +54,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/communication-standard-versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/communication-standard-versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/add-communication-standard-version_request.json"
@@ -100,7 +100,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.zorgapis.nl/v1beta1/communication-standards/05d8de10-1932-4e7f-badf-655c1a82fcc3 HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta2/communication-standards/05d8de10-1932-4e7f-badf-655c1a82fcc3 HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/standards/snippets/set-communication-standard-main-version_request.json"
@@ -128,7 +128,7 @@ erDiagram
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/communication-standards HTTP/1.1
+    GET https://api.zorgapis.nl/v1beta2/communication-standards HTTP/1.1
     ```
 
 === "Response"
@@ -158,7 +158,7 @@ List all versions for the communication standard with id `#!js "05d8de10-1932-4e
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/communication-standard-versions
+    GET https://api.zorgapis.nl/v1beta2/communication-standard-versions
         ?filter=eq(communicationStandardId,"05d8de10-1932-4e7f-badf-655c1a82fcc3") HTTP/1.1
     ```
 
