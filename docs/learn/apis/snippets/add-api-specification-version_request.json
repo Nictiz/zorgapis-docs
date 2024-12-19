@@ -1,8 +1,9 @@
 ﻿{
   "name": "2.0", // (1)!
   "description": "Verzamelen Huisartsgegevens 2.0",
-  "publishTime": "2020-09-02T00:00:00.000Z", // (2)!
-  "semVer": { // (3)!
+  "apiSpecificationId": "fe30bf05-de07-4556-9b17-1f82d62fe45f", // (2)!
+  "publishTime": "2020-09-02T00:00:00.000Z", // (3)!
+  "semVer": { // (4)!
     "major": 2,
     "minor": 0,
     "patch": 0
@@ -10,7 +11,7 @@
   "lifecycleState": "PUBLISHED",
   "urls": [
     {
-      "type": "FUNCTIONAL_DESIGN", // (4)!
+      "type": "FUNCTIONAL_DESIGN", // (5)!
       "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens"
     },
     {

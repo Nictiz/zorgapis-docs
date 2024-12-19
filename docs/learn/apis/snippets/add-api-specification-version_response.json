@@ -2,6 +2,11 @@
   "id": "15261fd0-b292-45d9-b6b1-266cc922fb50", // (1)!
   "name": "2.0",
   "description": "Verzamelen Huisartsgegevens 2.0",
+  "apiSpecificationId": "fe30bf05-de07-4556-9b17-1f82d62fe45f",
+  "apiSpecification": {
+    "id": "fe30bf05-de07-4556-9b17-1f82d62fe45f",
+    "name": "Verzamelen Huisartsgegevens"
+  },
   "publishTime": "2020-09-02T00:00:00.000Z",
   "semVer": {
     "major": 2,
