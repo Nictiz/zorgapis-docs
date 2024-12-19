@@ -123,6 +123,35 @@ erDiagram
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
 
+## Add communication standard version
+
+Learn how to link a communication standard version to your information standard version. To find the appropriate
+version, visit [this section](./adding-a-communication-standard.md#get-communication-standard-versions) for a guide on
+listing all available versions of a communication standard.
+
+=== "Request"
+
+    ```json
+    PUT https://api.zorgapis.nl/v1beta1/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json
+    HTTP/1.1 204 No Content // (1)!
+    ```
+
+    1.  After successfully adding the communication standard version, the API server responds with a `204` response with
+        no body.
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/information-standard-versions.communication-standard-versions/operation/setInformationStandardVersionCommunicationStandardVersion){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
 ## Get information standards
 
 === "Request"

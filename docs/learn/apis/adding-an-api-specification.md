@@ -313,7 +313,7 @@ listing all available versions of an information standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c HTTP/1.1
     ```
 
 === "Response"
