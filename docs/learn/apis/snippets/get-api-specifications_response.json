@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fe30bf05-de07-4556-9b17-1f82d62fe45f", // (1)!
+    "name": "Verzamelen Huisartsgegevens",
+    "description": "Het verzamelen van huisartsgegevens: je medische dossier bij je huisarts.",
+    "organizationId": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+    "organization": {
+      "id": "4a7c2c17-6514-46f8-aa05-6a22fb18b4ad",
+      "name": "Nictiz"
+    },
+    "architecturalStyle": "REST",
+    "mainVersionId": "15261fd0-b292-45d9-b6b1-266cc922fb50", // (2)!
+    "mainVersion": {
+      "id": "15261fd0-b292-45d9-b6b1-266cc922fb50",
+      "name": "2.0",
+      "description": "Verzamelen Huisartsgegevens 2.0",
+      "publishTime": "2020-09-02T00:00:00.000Z",
+      "semVer": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "lifecycleState": "PUBLISHED",
+      "urls": [
+        {
+          "id": "37bfbf71-570c-45c1-9fbf-7e5f63db61b8",
+          "type": "FUNCTIONAL_DESIGN",
+          "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/OntwerpHuisartsgegevens"
+        },
+        {
+          "id": "8a87c023-aabb-454f-8e1a-3443a13f11e2",
+          "type": "TECHNICAL_DESIGN",
+          "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_GP_Data"
+        }
+      ],
+      "lastDeclarationOfConformity": {
+        "id": "188c9c2c-ea9e-48fa-8423-5e8e2f60161c",
+        "requirementsVersion": "1.2.0",
+        "rankingLevel": "OPEN_API",
+        "rankings": {
+          "OPEN_API": {
+            "score": 27,
+            "maximumScore": 31
+          },
+          "TECHNICALLY_STANDARDIZED_API": {
+            "score": 6,
+            "maximumScore": 11
+          },
+          "FULLY_STANDARDIZED_API": {
+            "score": 2,
+            "maximumScore": 6
+          }
+        }
+      }
+    }
+  },
+  ...
+]

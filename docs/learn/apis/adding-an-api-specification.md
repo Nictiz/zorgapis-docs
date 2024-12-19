@@ -362,3 +362,59 @@ available versions of a trust framework.
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
+
+## Get API specifications
+
+=== "Request"
+
+    ```json
+    GET https://api.zorgapis.nl/v1beta2/api-specifications HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json hl_lines="6 15"
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    --8<-- "learn/apis/snippets/get-api-specifications_response.json"
+    ```
+
+    1.  The UUID of the [API specification](#add-api-specification).
+    2.  The UUID of the [main version](#set-api-specification-main-version-request).
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specifications/operation/listApiSpecifications){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
+## Get API specification versions
+
+List all versions for the API specification with id `#!js "fe30bf05-de07-4556-9b17-1f82d62fe45f"`:
+
+=== "Request"
+
+    ```json
+    GET https://api.zorgapis.nl/v1beta2/api-specification-versions
+        ?filter=eq(apiSpecificationId,"fe30bf05-de07-4556-9b17-1f82d62fe45f") HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json hl_lines="9"
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    --8<-- "learn/apis/snippets/get-api-specification-versions_response.json"
+    ```
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specification-versions/operation/listApiSpecificationVersions){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
