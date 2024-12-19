@@ -351,8 +351,8 @@ available versions of a trust framework.
     HTTP/1.1 204 No Content // (1)!
     ```
 
-    1.  After successfully adding the trust framework version, the API server responds with a `204` response with
-        no body.
+    1.  After successfully adding the trust framework version, the API server responds with a `204` response with no
+        body.
 
 !!! note
 
