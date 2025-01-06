@@ -18,7 +18,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/trust-frameworks HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/trust-frameworks HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/agreements/snippets/add-trust-framework_request.json"
@@ -54,7 +54,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/trust-framework-versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/trust-framework-versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/agreements/snippets/add-trust-framework-version_request.json"
@@ -100,7 +100,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.zorgapis.nl/v1beta1/trust-frameworks/3d443c34-24a4-4640-bfe5-822627af76e2 HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta2/trust-frameworks/3d443c34-24a4-4640-bfe5-822627af76e2 HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/agreements/snippets/set-trust-framework-main-version_request.json"
@@ -128,7 +128,7 @@ erDiagram
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/trust-frameworks HTTP/1.1
+    GET https://api.zorgapis.nl/v1beta2/trust-frameworks HTTP/1.1
     ```
 
 === "Response"
@@ -158,7 +158,7 @@ List all versions for the trust framework with id `#!js "3b49f2e6-fd5c-48a8-a59c
 === "Request"
 
     ```json
-    GET https://api.zorgapis.nl/v1beta1/trust-framework-versions
+    GET https://api.zorgapis.nl/v1beta2/trust-framework-versions
         ?filter=eq(trustFrameworkId,"3b49f2e6-fd5c-48a8-a59c-5fcbed78e5ae") HTTP/1.1
     ```
 

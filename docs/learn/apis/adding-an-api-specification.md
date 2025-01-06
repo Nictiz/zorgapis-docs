@@ -20,7 +20,7 @@ erDiagram
 === "Request"
 
     ```json hl_lines="7"
-    POST https://api.zorgapis.nl/v1beta1/api-specifications HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specifications HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-api-specification_request.json"
@@ -58,14 +58,15 @@ erDiagram
 === "Request"
 
     ```json
-    POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specification-versions HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-api-specification-version_request.json"
     ```
 
     1.  The name of the API specification version, must be **unique** for this API specification.
-    2.  The date and time (formatted as per [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){: target="_blank" }) at
+    2.  The UUID of the [API specification](#add-api-specification) to which this version belongs.
+    3.  The date and time (formatted as per [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){: target="_blank" }) at
         which the API specification version was published. In other words, the date and time at which this version was
         first made available by the [organization](../organizations/adding-an-organization.md#add-organization) that
         maintains the API specification.
@@ -73,13 +74,13 @@ erDiagram
         **Note**: `publishTime` is **not** to be used for the date and time at which this version is published in the
         API Library for Dutch Healthcare. This value is set automatically by the API server upon creation of the item
         and can be accessed via read-only property `createTime`.
-    3.  The [SemVer](https://semver.org/){: target="_blank" } version information. Additional properties for pre-release
+    4.  The [SemVer](https://semver.org/){: target="_blank" } version information. Additional properties for pre-release
         (`#!js "preRelease"`) and build metadata (`#!js "build"`) are available.
-    4.  The URL type, for example, `#!js "OPENAPI_SPECIFICATION"`.
+    5.  The URL type, for example, `#!js "OPENAPI_SPECIFICATION"`.
 
 === "Response"
 
-    ```json hl_lines="5 17 22"
+    ```json hl_lines="5 9-12 22 27"
     HTTP/1.1 201 Created
     Content-Type: application/json
 
@@ -96,7 +97,7 @@ erDiagram
 !!! note
 
     To learn more, view the [API reference](
-    https://oas.zorgapis.nl/#tag/api-specifications.versions/operation/addApiSpecificationVersion){: target="_blank" }
+    https://oas.zorgapis.nl/#tag/api-specification-versions/operation/addApiSpecificationVersion){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
@@ -218,7 +219,7 @@ used with our
 === "Request"
 
     ```json
-    POST https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/declarations-of-conformity HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/add-declaration-of-conformity_request.json"
@@ -242,7 +243,7 @@ used with our
 !!! note
 
     To learn more, view the [API reference](
-    https://oas.zorgapis.nl/#tag/api-specifications.versions.declarations-of-conformity/operation/addApiSpecificationVersionDeclarationOfConformity){: target="_blank" }
+    https://oas.zorgapis.nl/#tag/api-specification-versions.declarations-of-conformity/operation/addApiSpecificationVersionDeclarationOfConformity){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
@@ -252,7 +253,7 @@ used with our
 === "Request"
 
     ```json hl_lines="5"
-    PATCH https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
+    PATCH https://api.zorgapis.nl/v1beta2/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/apis/snippets/set-api-specification-main-version_request.json"
@@ -284,7 +285,7 @@ listing all available versions of a communication standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/communication-standard-versions/8ae84d7f-73e7-4f08-b839-c73c97128ada HTTP/1.1
     ```
 
 === "Response"
@@ -299,7 +300,7 @@ listing all available versions of a communication standard.
 !!! note
 
     To learn more, view the [API reference](
-    https://oas.zorgapis.nl/#tag/api-specifications.versions.communication-standard-versions/operation/setApiSpecificationVersionCommunicationStandardVersion){: target="_blank" }
+    https://oas.zorgapis.nl/#tag/api-specification-versions.communication-standard-versions/operation/setApiSpecificationVersionCommunicationStandardVersion){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
@@ -313,7 +314,7 @@ listing all available versions of an information standard.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/information-standard-versions/20685da1-0e1d-40b9-a0f6-5a89c444f48c HTTP/1.1
     ```
 
 === "Response"
@@ -328,7 +329,7 @@ listing all available versions of an information standard.
 !!! note
 
     To learn more, view the [API reference](
-    https://oas.zorgapis.nl/#tag/api-specifications.versions.information-standard-versions/operation/setApiSpecificationVersionInformationStandardVersion){: target="_blank" }
+    https://oas.zorgapis.nl/#tag/api-specification-versions.information-standard-versions/operation/setApiSpecificationVersionInformationStandardVersion){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.
@@ -342,7 +343,7 @@ available versions of a trust framework.
 === "Request"
 
     ```json
-    PUT https://api.zorgapis.nl/v1beta1/api-specifications/fe30bf05-de07-4556-9b17-1f82d62fe45f/versions/15261fd0-b292-45d9-b6b1-266cc922fb50/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
+    PUT https://api.zorgapis.nl/v1beta2/api-specification-versions/15261fd0-b292-45d9-b6b1-266cc922fb50/trust-framework-versions/78ca8495-a4f4-4b41-b97b-c912c2e96450 HTTP/1.1
     ```
 
 === "Response"
@@ -357,7 +358,63 @@ available versions of a trust framework.
 !!! note
 
     To learn more, view the [API reference](
-    https://oas.zorgapis.nl/#tag/api-specifications.versions.trust-framework-versions/operation/setApiSpecificationVersionTrustFrameworkVersion){: target="_blank" }
+    https://oas.zorgapis.nl/#tag/api-specification-versions.trust-framework-versions/operation/setApiSpecificationVersionTrustFrameworkVersion){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
+## Get API specifications
+
+=== "Request"
+
+    ```json
+    GET https://api.zorgapis.nl/v1beta2/api-specifications HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json hl_lines="6 15"
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    --8<-- "learn/apis/snippets/get-api-specifications_response.json"
+    ```
+
+    1.  The UUID of the [API specification](#add-api-specification).
+    2.  The UUID of the [main version](#set-api-specification-main-version-request).
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specifications/operation/listApiSpecifications){: target="_blank" }
+    or fork our [Postman Collection](
+    https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
+    and explore our API.
+
+## Get API specification versions
+
+List all versions for the API specification with id `#!js "fe30bf05-de07-4556-9b17-1f82d62fe45f"`:
+
+=== "Request"
+
+    ```json
+    GET https://api.zorgapis.nl/v1beta2/api-specification-versions
+        ?filter=eq(apiSpecificationId,"fe30bf05-de07-4556-9b17-1f82d62fe45f") HTTP/1.1
+    ```
+
+=== "Response"
+
+    ```json hl_lines="9"
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    --8<-- "learn/apis/snippets/get-api-specification-versions_response.json"
+    ```
+
+!!! note
+
+    To learn more, view the [API reference](
+    https://oas.zorgapis.nl/#tag/api-specification-versions/operation/listApiSpecificationVersions){: target="_blank" }
     or fork our [Postman Collection](
     https://www.postman.com/zorgapis/zorgapis/collection/6oerml3/zorgapis-api){: target="_blank" }
     and explore our API.

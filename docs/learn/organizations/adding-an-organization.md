@@ -14,7 +14,7 @@ https://www.zorgapis.nl/){: target="_blank" } via our API.
 === "Request"
 
     ```json
-    POST https://api.zorgapis.nl/v1beta1/organizations HTTP/1.1
+    POST https://api.zorgapis.nl/v1beta2/organizations HTTP/1.1
     Content-Type: application/json
 
     --8<-- "learn/organizations/snippets/add-organization_request.json"
